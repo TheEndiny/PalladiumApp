@@ -14,7 +14,7 @@ to do:
 
 Wish List
 
-* add a few simpe filters
+* add a few simple filters
 * ability to create a "spellbook" that loads only known spells for different characers
-* adding other useful features like health/PPE tracker
-* Adding other info like Psionics, spells from additional books, common equipment, skill calculator, etc...
+* adding other useful features like health/PPE tracker, skill calculator,
+* Adding other info like Psionics, spells from additional books, common equipment, etc...
