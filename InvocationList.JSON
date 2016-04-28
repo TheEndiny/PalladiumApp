@@ -167,9 +167,7 @@ Evil emanations from human beings are much less distinct, and cannot be sensed u
     90% undetectable if not moving
     70% undetectable if moving 2 feet per melee or slower
     20% undetectable if moving 6 feet per melee
-    Totally ineffective if moving any faster 
-
-One final note, for those who are wondering. Yes, this spell, unlike a true chameleon, can do plaid. :)"
+    Totally ineffective if moving any faster. One final note, for those who are wondering. Yes, this spell, unlike a true chameleon, can do plaid. :)"
   },
   {
     "invocationName":"Cleanse",
@@ -1334,27 +1332,30 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Commune with Spirits",
     "level":8,
     "cost":"25",
-    "range":"200 feet",
-    "duration":"5 minutes",
+    "range":"Self, or others by ritual, 200 foot distance",
+    "duration":"5 minutes PLE",
     "source":"Rifts Ultimate Edition",
     "page":214,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"The incantation enables the arcanist to see and speak with all types of "entities", including poltergeists, haunting spirits, trapped entities, imprisoned entities, and possessing entities. The ability to see and communicate with these ghostlike beings does not mean that they will obey the character, but a dialogue can be exchanged."
   },
   {
     "invocationName":"Exorcism",
     "level":8,
     "cost":"30",
     "range":"30 feet",
-    "duration":"3 minutes",
+    "duration":"the spell lasts 3 minutes, results last 6 months or longer",
     "source":"Rifts Ultimate Edition",
     "page":214,
     "type":"",
     "usage":["Buff.png, Utility.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":" Exorcism is a powerful magic that forces a possessing supernatural being to relinquish its control over the enslaved person, animal or object. Forced out of its host body, the evil intelligence will try to possess any other human or animal within the immediate area (30ft. line of vision). The horrid thing gets two attempts at possession. Fortunately, the exorcism incantation protects the person who was its original victim with a bonus of +12 to save vs. possession and the mage conducting the exorcism with bonus of +6 to save vs. possession. Anybody else in the area has no extra bonus, and is in great peril. If the evil force fails in both of its attempts to take possession of a host body, roll percentile dice on the following:
+
+    1-52: The evil intelligence instantly returns to its home dimension.
+    53-00: The being can continue to exist in our world, but must immediately flee the area and not return for at least 6 months. "
   },
   {
     "invocationName":"Expel Demons",
@@ -1373,14 +1374,21 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Eyes of the Wolf",
     "level":8,
     "cost":"25",
-    "range":"Touch",
-    "duration":"5 minutes",
+    "range":"Self or other",
+    "duration":"5 minutes PLE",
     "source":"Rifts Ultimate Edition",
     "page":214,
     "type":"",
     "usage":["Buff.png", "Utility.png"],
 	"save":"",
-	"description":""
+	"description":" Bestows the following abilities:
+
+    Nightvision: 60 ft.
+    See the invisible: 75%
+    Identify plants & fruits: 70%
+    Identify tracks: 85%
+    Track: 50%
+    Recognize Poison: 65% "
   },
   {
     "invocationName":"Forcebonds",
@@ -1438,27 +1446,28 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Locate",
     "level":8,
     "cost":"30",
-    "range":"15 Miles",
+    "range":"15 Miles PLE",
     "duration":"Instant",
     "source":"Rifts Ultimate Edition",
     "page":215,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"This spell enables the arcanist to sense the general location of his quarry. The location is limiteto a general area or environment, like a specific apartment building, house, shopping mall, church, park, on an airplane, etc.
+To locate a particular personthe arcanist must have either personally encountered the individual or a photograph must be provided. The success ratio for a spell is 41%; for a ritual, the success ratio is 89%, but this also requires an object owned by the person, or a lock of hair, fingernail clipping, of dried blood from the person."
   },
   {
     "invocationName":"Luck Curse",
     "level":8,
     "cost":"40",
-    "range":"Touch",
-    "duration":"1440 minutes",
+    "range":"Touch or 10 feet",
+    "duration":"24 hours PLE",
     "source":"Rifts Ultimate Edition",
     "page":215,
     "type":"",
     "usage":["Debuff.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"This particularly nasty incantation inflicts it target with bad luck. The victim's normal bonuses to strike, parry, dodge, initiative, and roll with punch are reduced to zero; no bonuses. Critical strikes do normal damage (except for the natural 20, which always does double damage); a death blow or knockout/stun punch only does 1D4 damage. Kick attacks have a 60% chance of causing the character to trip and fall down. Prowl rolls turn into clumsy rolls, making noise every time it is tried. All skills are at -40%, but only during critical situations. Other instances of bad luck are at the GM's discretion. Only a Remove Curse incantation can negate the effect of this enchantment prior to it wearing off."
   },
   {
     "invocationName":"Magical-Adrenal Rush",
@@ -1477,27 +1486,27 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Metamorphosis (Human)",
     "level":8,
     "cost":"40",
-    "range":"Self",
-    "duration":"20 minutes",
+    "range":"Self, or others by ritual",
+    "duration":"20 minutes PLE",
     "source":"Rifts Ultimate Edition",
     "page":216,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"A human mage can shapechange, altering his or her physical structure. The ultimate disguise, the character can change his height, weight, age, hair color, hair length, skin color, gender, and features. A non-human can transform himself to appear completely human. To attempt to impersonate a real, existing person, the arcanist must have the disguise skill, even though he/she is mentally molding his/her features through magic. A good photograph is required. A mirror does help. The success ratio for imitating/impersonating a real person is the mage's disguise skill +20%. The better he knows the person the more complete the disguise. In a ritual version of magic, the mage can metamorphosize somebody else, rather than himself. Also in the ritual magic, the mage can metamorphosize someone into an exact duplicate of himself. Furthermore, a captive at the ceremony can be duplicated without flaw. Note: the metamorphosis process only changes the appearance of the body. The transformed person retain his own voice, memory, skills, and attributes/abilities."
   },
   {
     "invocationName":"Negate Magic",
     "level":8,
     "cost":"30",
-    "range":"60 feet",
+    "range":"Touch or 60 feet",
     "duration":"Instant",
     "source":"Rifts Ultimate Edition",
     "page":216,
     "type":"",
     "usage":["Buff.png", "Offensive.png"],
-	"save":"",
-	"description":""
+	"save":"Special",
+	"description":"This incantation will instantly cancel the effects or influence of most magic. To determine whether the negation is successful or not, roll a saving throw. If the roll is a successful save against the magic used, its influence is immediately destroyed/negated/cancelled. A failed save means the negation attempt did not work. Try again if sufficient PPE is available. Negation will not work against possession, exorcism, constrain being, banishment, talisman, amulet, enchanted objects, symbols/circles of protection, wards, summoning magic, zombies, golems, restoration or healings/cures. Negation can be attempted to cancel a curse, but only has a 25% possibility of succeeding, and that's only if the saving throw was successful. Of course, it has no affect against psychic abilities or the machines of a psi-mechanic."
   },
   {
     "invocationName":"Power Weapon",
@@ -1529,40 +1538,40 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Sickness",
     "level":8,
     "cost":"50",
-    "range":"20 feet",
-    "duration":"72 minutes",
+    "range":"Touch or 20 feet",
+    "duration":"12 hours PLE",
     "source":"Rifts Ultimate Edition",
     "page":217,
     "type":"",
     "usage":["Defensive.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"Sickness is a debilitating magic which afflicts its victims with the symptoms of a specific disease. Only the symptoms of the disease manifest themselves, not the actual disease. Consequently, a medical examination will show that there is no physical cause to the illness. At best, it will be diagnosed as psychological or unknown. No matter how ill or helpless the victim may become, he can not die from the magic sickness. But the character will suffer greatly. All sickness inflicted by this magic is severe, inflicting the following penalties and modifiers: Attacks per melee are reduced to one, physical endurance is reduced by 70%, -4 to strike, parry, and dodge, no initiative, and skills are at -40%. The person is very weak, disoriented, and uncomfortable."
   },
   {
     "invocationName":"Spoil (Water/Food)",
     "level":8,
     "cost":"30",
-    "range":"3 feet",
+    "range":"Touch or 3 feet",
     "duration":"Instant",
     "source":"Rifts Ultimate Edition",
     "page":217,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"Basically, this spell is the opposite of Purification. In this case, the mage can instantly transform good food into spoiled, affecting 50 lbs. or 10 gallons of water/fluids, making the food inedible and the water undrinkable. Anybody who forces themselves to eat or drink the horrible tasting food or drink will get sick with stomach cramps and diarrhea. Penalties: -1 to strike, parry, dodge, and initiative."
   },
   {
     "invocationName":"Wisps of Confusion",
     "level":8,
     "cost":"40",
     "range":"90 feet",
-    "duration":"1.25 minutes",
+    "duration":"5 melees PLE",
     "source":"Rifts Ultimate Edition",
     "page":217,
     "type":"",
     "usage":["Debuff.png"],
 	"save":"",
-	"description":""
+	"description":"Wisps cause 1D8 people/creatures to become confused and disoriented. Those affected are at -5 to strike, parry, and dodge; attacks per melee are reduced by half."
   },
   {
     "invocationName":"Desiccate the Supernatural",
@@ -1594,66 +1603,66 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Familiar Link",
     "level":9,
     "cost":"55",
-    "range":"Self",
-    "duration":"Permanent",
+    "range":"Self and animal/600 feet",
+    "duration":"Indefinite",
     "source":"Rifts Ultimate Edition",
     "page":217,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" At third level, a practicioner of magic is experienced enough to mentally link with a small animal. This link is permanent, producing a rather impressive symbiotic relationship. No matter how wild or mean the animal may have been, it will be instantly linked to the mage, becoming docile and submissive to him and him alone. The two are now one. The spell caster is its friend and master, an extension of the animal. The animal familiar will understand and obey any command, mental or verbal. For the mage, the familiar is now a sensory extension enabling him to see, hear, smell, taste, and feel everything the animal experiences. Thus, familiars make great spies, listening to conversations and prowling into areas not easily accessible to its master. Although the familiar understands and obeys its master, it can not actually speak to him. Just as the arcanist knows what the familiar is feeling, so does the familiar know what its master is experiencing. If one is in danger, the other will know it. Because of the magical nature of the union, the mage and familiar both get an additional six hit points. However, if the familiar is hurt or attacked, its master also takes the same damage, even if miles apart. If the familiar is killed, the arcanist permanently loses 10 hit points! There is a 50% chance he will also suffer shock from the ordeal; if he does, he will lapse into a coma for 1D6 hours. Another familiar link cannot be tried again for another 1.5 years. Other Limitations:     1. Telepathic/empathic communications: maximum range: 600 ft.     2. Familiar possesses its normal animal abilities.     3. Size: 25 lbs. maximum     4. Usual animal types used: cats, dogs, coyotes, foxes, weasels, rodents, birds, lizards, snakes. "
   },
   {
     "invocationName":"Mute",
     "level":9,
     "cost":"50",
     "range":"30 feet",
-    "duration":"5 minutes",
+    "duration":"20 minutes PLE",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Debuff.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"This spell temporarily affects the voice box and vocal cords, preventing any voice or sounds from being uttered."
   },
   {
     "invocationName":"Protection Circle (Simple)",
     "level":9,
     "cost":"45",
-    "range":"Special",
-    "duration":"1440 minutes",
+    "range":"Radius of the circle",
+    "duration":"24 hours, plus 4 PPE to reactivate after the circle's initial creation",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Defensive.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"This invocation requires the drawing of a circle and symbols while the incantation is recited. Chalk or charcoal, or almost any substance, can be used to draw the circle. 45 PPE points are needed to initially create the circle, but a mere four PPE is all that is needed to reactivate it. Anybody with sufficient PPE and desire can reactivate a protection circle. However, if the circle is damaged (scraped, scarred, rubbed out, etc), it will not function and a new one will have to be created. The simple protection circle will protect everybody inside its radius by keeping lesser supernatural creatures five feet away from the circle. The creatures cannot come any closer, nor enter the circle. The circle also provides its occupants with a bonus of +2 to save vs. magic and psychic attack. Although lesser supernatural beings, such as entities, ghouls, and gremlins, cannot come near or enter the circle, they can hurl objects, use weapons, or use magic and psychic powers against the person(s) inside teh circle. Greater beings, such as vampires, elementals, and demi-gods, are not affected by the simple circle, and can enter effortlessly. No bonuses vs. magic apply against these powerful beings, either."
   },
   {
     "invocationName":"Speed of the Snail",
     "level":9,
     "cost":"50",
     "range":"60 feet",
-    "duration":"0.5 minutes",
+    "duration":"30 seconds PLE",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Debuff.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"This time distortion spell reduces the physical prowess, speed, and mobility of its victims to one-third their normal ability. Speed, attacks per melee, dodge, and parry are all reduced to one-third. Spell-casting is not reduced. This spell can be cast on 1D6 people up to 60 ft. away, but within the spell caster's line of vision. Also affects robots and vehicles."
   },
   {
     "invocationName":"Summon and Control Canine",
     "level":9,
     "cost":"50",
-    "range":"Special",
-    "duration":"",
+    "range":"Varies",
+    "duration":"5 hours PLE",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":[""],
-	"save":"",
-	"description":""
+	"save":"Standard animal, but only if part of the player character's group",
+	"description":"The summon and control canines pentacle will provide 1D4 canines (dogs, wolves, foxes, coyotes, etc), plus one additional canine per level of experience. The animals will be under the complete control of the mage, obeying his every command, and will fight to the death. The pentacle will also give the mage the power to control any other canines which were not originally summoned, within a 200 ft. line of vision, so long as he remains in the pentacle. The canines originally summoned will obey the arcanist in and out of the pentagram for the duration of the enchantment, then leave."
   },
   {
     "invocationName":"Wall of Defense",
@@ -1673,39 +1682,39 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "level":9,
     "cost":"40",
     "range":"12 feet",
-    "duration":"Instant",
+    "duration":"Instant/permanent",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"Another transformation spell, the spell caster is able to change ordinary fresh water into wine, affecting 10 gallons per level of experience. The wine is fair to average quality, increasing by 5% per each level of experience."
   },
   {
     "invocationName":"Banishment",
     "level":10,
     "cost":"65",
     "range":"100 feet",
-    "duration":"20160 minutes",
+    "duration":"2 weeks PLE",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Defensive.png", "Utility.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"A useful invocation for controlling supernatural beings. The magic forces one lesser supernatural being/demon, per experience level of the caster, to leave the immediate area (600 ft. radius). The creature is unable to return for at least 2 weeks per level of experience. Each lesser being gets to roll to save vs. magic. A successful save means it is not banished, and can stay to cause trouble."
   },
   {
     "invocationName":"Control Enslave Entity",
     "level":10,
     "cost":"80",
     "range":"30 feet",
-    "duration":"2880 minutes",
+    "duration":"48 hours PLE",
     "source":"Rifts Ultimate Edition",
     "page":218,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"Standard",
+	"description":"Another incantation used to control supernatural forces. The magic does not summon entities, but does enable the mage to control them when encountered. The arcanist can control two entities per level of experience. Each entity gets to make a saving throw vs. magic. A successful save means it is not controlled by the arcanist. A failed roll means it will obey the arcanist to the best of its ability (some are barely intelligent). At the end of its mandatory service to the arcanist, the mage can try to renew his control by invoking the control invocation again, banish the creature, or just let his control slip away. The latter can be dangerous, because the evil beings may turn on the mage to extract vengeance or just out of spite. On the other hand, the more intelligent types may willingly agree to work with an arcanist, especially an evil one, if it will help the diabolical being in its own schemes or to inflict pain and suffering."
   },
   {
     "invocationName":"Deathword",
@@ -1737,14 +1746,14 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Metamorphosis (Superior)",
     "level":10,
     "cost":"100",
-    "range":"Self",
-    "duration":"20 minutes",
+    "range":"Self, others by ritual",
+    "duration":"20 minutes PLE",
     "source":"Rifts Ultimate Edition",
     "page":219,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"none",
+	"description":"This incantation enables the spell caster to transform himself into any real, living creature: animal, human, D-Bee, or insect. The usual limitations and abilities still apply. The mage can also transform himself to resemble a supernatural creature, but does not possess any of its powers or abilities, only his normal, human abilities (IQ, memory, attributes, hit points, SDC, etc)."
   },
   {
     "invocationName":"Meteor",
@@ -1764,13 +1773,16 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "level":10,
     "cost":"60",
     "range":"20 feet",
-    "duration":"1 minutes",
+    "duration":"1 minute PLE",
     "source":"Rifts Ultimate Edition",
     "page":219,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" This spell creates a dimensional rift in the fabric of space, allowing the spell caster to use it in the following ways:
+
+    Pass through solid walls. The caster has but to weave the spell targeting a particular, blocked area. The area will shimmer bright and suddenly, a portal or passage will appear as if cut out of the very stone. The portal can create a 12 ft. deep passage per each level of the spell caster in any substance.
+    Teleportation. The portal can also teleport someone to another location known to the spell caster instantly, as well as flawlessly. Limitations: as per the Teleport spell. The portal can be placed on a vertical wall. Looking into it reveals what will appear to be just the other side of the wall, even though the view may be completely incongruous to one's present location. Stepping through it will instantly place the person in that location. Range is a meagre 100 ft. per level of experience.  The major limitation of this spell, in all its modes of transport, is that the portal provides only one-way" - Size: 10 ft wide by 20 ft tall portal/opening
   },
   {
     "invocationName":"Plane Skip",
@@ -1803,26 +1815,26 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "level":10,
     "cost":"70",
     "range":"600 feet",
-    "duration":"300 minutes",
+    "duration":"5 hours PLE",
     "source":"Rifts Ultimate Edition",
     "page":220,
     "type":"",
     "usage":["Offensive.png", "Utility.png"],
-	"save":"",
-	"description":""
+	"save":"Standard animal",
+	"description":"This pentacle of summoning produces an army of mice, rats, and/or other rodents that obey the will of the arcanist who summoned them. As long as the mage stands in the pentagram, he can control any type of rodents. Note: Familiars are not affected. The sorcerer can summon 30 rodents per level of experience. Mice and rat bites inflict one point of damage each. Mice have one attack per melee, rats have two. All are +1 to dodge, and are excellent climbers."
   },
   {
     "invocationName":"Summon Shadow Beast",
     "level":10,
     "cost":"140",
-    "range":"Special",
-    "duration":"Varies",
+    "range":"I(mmediate",
+    "duration":"Special",
     "source":"Rifts Ultimate Edition",
     "page":220,
     "type":"",
     "usage":["Offensive.png", "Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"This interdimensional spell summons a creature not of this world to do the bidding of the spell caster. Shadow beasts are large, vicious predators of some other, strange world. They stand 9 to 12 ft. tall, with sharp claws and wicked fangs. Deadliest of all is their ability to completely merge into the smallest shadow, becoming completely invisible. While hidden in shadows they are undetectable, even by a See the Invisible spell, since they are not truly invisible, but one with the shadow. see book for shadow abilities."
   },
   {
     "invocationName":"Super-Healing",
@@ -1841,14 +1853,14 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Anti-Magic Cloud",
     "level":11,
     "cost":"140",
-    "range":"100 feet",
-    "duration":"5 minutes",
+    "range":"100 feet radius PLE",
+    "duration":"20 melees PLE",
     "source":"Rifts Ultimate Edition",
     "page":221,
     "type":"",
     "usage":["Debuff.png", "Utility.png"],
-	"save":"",
-	"description":""
+	"save":"Special",
+	"description":"This spell creates an ominous, dark grey-brown cloud large enough to hang over an entire town. It cannot be dispelled magically or by manipulating elemental/atmospheric conditions. The cloud's effect is as singular as it is spectacular; it simply negates all magic! Spell casters cannot use magic of any kind, techno-wizard devices, potions, and charms are impotent. Any object of magic (except rune and magic weapons) is rendered harmless as long as it is under the anti-magic cloud. The magic returns when the cloud is cancelled. Only the creator of the cloud is not affected. Saving throw: Only a natural 18 through 20 saves against the cloud, and even these lucky few will find their magic reduced to half strength. If outside the cloud's range, the magic abilities return."
   },
   {
     "invocationName":"Create Mummy",
@@ -1860,8 +1872,8 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "page":221,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":"The mummy invocation is a necromantic ritual that turns a corpse into one of the undead. The ritual involves treating pure linen strips of cloth with a mystic solution and wrapping the body in the cloth. The invocation brings to life (if you can call it that) a sort of humanoid robot that is devoid of emotions and fearless. Like a machine, the barely intelligent "thing" follows simple orders to the best of its ability. The mummy is incapable of understanding complex commands, or performing any skills. It is simply a lumbering corpse. Of course, this combined with its near indestructibility makes it an ideal guardian. A simple command like "Kill all who enter," (with the exception of the mage) is all it needs to know. A mummy cannot speak (or read) but grunts, growls, and howls. The most devastating aspect of the damnable creature is that it is dead, and feels no pain or emotions. Bullets, knives, clubs, and even most magic have no effect against the monster. Physical attacks simply nick or poke holes into a lifeless husk. Magic charms, sleeps, curses, illusions, illness, paralysis, and turn dead (the mummy is an undead) do nothing at all. Banishment does not work because the mummy is not actually a living supernatural creature. Negation simply does not work, and remove curse is not applicable. The only way to stop a mummy is to: 1) Trap or imprison it. 2) Blow it to bits. 3) Burn it up. Note: Protection circles will hold a mummy at bay. Fire is its one major weakness and it knows that, so a wall of fire, torch, or flamethrower may also keep it at bay. The magic is present in both the dead body and the linen wrappings. If the wrappings are destroyed, fire does double damage to the corpse, and even sunlight will inflict 3D6 points of damage per melee of exposure. - see book for mummy stats"
   },
   {
     "invocationName":"Firequake",
@@ -1880,14 +1892,14 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Remove Curse",
     "level":11,
     "cost":"140",
-    "range":"10 feet",
+    "range":"Touch or 10 feet",
     "duration":"Instant",
     "source":"Rifts Ultimate Edition",
     "page":222,
     "type":"",
     "usage":["Healing.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" The mage can attempt to remove any type of curse using this incantation. To determine success, a 20-sided die is rolled, plus bonuses, to save vs. magic. A successful save means that the curse is still in effect. Try again with a new invocation and another 140 PPE. The remove curse is a powerful magic that provides bonuses to save vs. magic and to remove that curse. The bonuses are: 1.     Spell: +5 to save. 2.     Ritual: +10 to save. "
   },
   {
     "invocationName":"Re-Open Gateway",
@@ -1919,27 +1931,27 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "invocationName":"Amulet",
     "level":12,
     "cost":"290",
-    "range":"Special",
+    "range":"Holder/wearer of the amulat",
     "duration":"Permanent",
     "source":"Rifts Ultimate Edition",
     "page":223,
     "type":"",
     "usage":["Buff.png","Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" The "amulet" is a potent invocation that instills a medallion or charm with mystic properties that will protect an individual from magic or supernatural forces. The only requirement of the invocation is that the amulet be made of one metal purified by fire or made of semiprecious stone.  The sole purpose of the amulet is to protect. Protection is provided in several different ways. Any one of the following can be created by the amulet invocation. - see book for types of amulets that can be created"
   },
   {
     "invocationName":"Calm Storms",
     "level":12,
     "cost":"200",
-    "range":"Instant",
-    "duration":"60 minutes",
+    "range":"Immediate area surrounding the mage, affecting one mile PLE",
+    "duration":"1 hour PLE",
     "source":"Rifts Ultimate Edition",
     "page":223,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" The arcanist can calm the the tumuluous tempest of nature with a simple invocation and 200 points of PPE. As a spell, the mage can slow a downpour to a ligh rain, reduce wind speed by half, reduce waves by half, and lighten the dark, stormy skies. Using ritual magic the mystic can turn a torrential rain into a drizzle, reduce winds to a gentle breeze, shrink ocean waves to normal, disperse a tornado in an instant, and get the sun to peek through clearing skies. Note: Calm Storms is effective against natural and magically induced storms."
   },
   {
     "invocationName":"Create Zombies",
@@ -1951,8 +1963,8 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "page":223,
     "type":"",
     "usage":["Utility.png"],
-	"save":"",
-	"description":""
+	"save":"None",
+	"description":" The zombie invocation is a necromantic ritual that turns a corpse into the undead. The create a zombie, the sorcerer must find a recently deceased body, no more than six hours dead, lay it on a while or silver linen, draw a circle around it, and light three scented candles. The candles are then placed on the body: one on the forehead, one on the mouth, and one on the chest above the heart. As the incantation reaches its climax, the mage cuts his finger and draws a pentagram on the corpse's throat with his still warm blood. Moments later, the monstrosity rises to pseudo-life, the obedient slave of its master. The ceremony must be done secretly in a graveyard or burial place during the night of a full moon. The zombie is more intelligent than the mummy, and can speak, read simple signs and sentences, perform simple tasks, and even drive a car. This means a zombie(s) can be sent to retrieve an artifact, follow somebody, kidnap a person, and so on. A zombie will only obey the person who created it and individuals whom its creator may designate as authorities. Like the mummy, a zombie is a walking corpse. It feels no pain, no fears, no goals, and little emotion. Bullets, knives, clubs, and other physical attacks do NO damage. Mental assaults by psychics, magic charms, illusions, sleeps, curses, sickness, paralysis, and other similar attacks do no damage. Turn dead does not work because the zombie is an undead. Banishment doesn't work because it is not actually a living supernatural being. Negation simply does not work, and remove curse is not applicable. However, the zombie is more vulnerable than the mummy, the trick is knowing what to use. A Zombie is vulnerable to magical energy attacks, such as energy bolt, fire bolt, circle of flame, and call lightning, all of which do full damage. Normal electricity, lasers, particle beam weapons, and similar energy weapons do half their normal damage. Normal fire inflicts full damage. Weapons made of, or covered in, silver will do full damage whether it be a blade or bullet. Zombies can also be trapped/imprisoned and blown up. Zombies will rise again, even if riddled with silver bullets or blown to bits, unless their heads are severed from their bodies and buried separately, or an exorcism is performed. Otherwise it will regenerate all SDC and body parts within 48 hours and seek out its master for new instructions. There is no limit to the number of zombies a mage can command. Horror stories in Haiti whisper of entire sugar cane plantations worked by zombie labourers. - see book for zombie stats"
   },
   {
     "invocationName":"Ensorcel",
