@@ -6,7 +6,6 @@ to do:
 * Make it look pretty
 * when clicked, have it pull all info (right not just description, need to pull range, level, etc...)
 * Update JSON 
-     * how we are using the "usage" fields changed
      * inputting descriptions and if the spell allows for a saving throw
      * Change range and duration fields to reflect level increases for some spells
      * some spells shoudl have the duration changed from minutes to numer of melees
