@@ -99,7 +99,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sense Evil",
@@ -115,7 +117,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sense Magic",
@@ -131,7 +135,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Thunderclap",
@@ -147,7 +153,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Befuddle",
@@ -163,7 +171,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Chameleon",
@@ -179,7 +189,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Cleanse",
@@ -195,7 +207,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Climb",
@@ -211,7 +225,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Cloak of Darkness",
@@ -227,7 +243,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Concealment",
@@ -243,7 +261,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Detect Concealment",
@@ -259,7 +279,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Extinguish Fire",
@@ -275,7 +297,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fear",
@@ -291,7 +315,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Heavy Breathing",
@@ -307,7 +333,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Levitation",
@@ -323,7 +351,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Manipulate Objects",
@@ -339,7 +369,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Turn Dead",
@@ -355,7 +387,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Armor of Ithan",
@@ -371,7 +405,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Breath Without Air",
@@ -387,7 +423,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Energy Bolt",
@@ -403,7 +441,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fingers of the Wind",
@@ -419,7 +459,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Float in Air",
@@ -435,7 +477,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fuel Flame",
@@ -451,7 +495,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Ingite Fire",
@@ -467,7 +513,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Impervious to Fire",
@@ -483,7 +531,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Impervious to Poison",
@@ -499,7 +549,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Invisibility (Simple)",
@@ -515,7 +567,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Life Source",
@@ -531,7 +585,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Light Healing",
@@ -547,7 +603,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Magic Shield",
@@ -563,7 +621,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Mystic Fulcrum",
@@ -579,7 +639,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Negate Poison Toxin",
@@ -595,7 +657,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Paralysis (Lesser)",
@@ -611,7 +675,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Resist Fire",
@@ -627,7 +693,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Blind",
@@ -643,7 +711,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Carpet of Adhesion",
@@ -659,7 +729,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Charismatic Aura",
@@ -675,7 +747,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Cure Minor Disorders",
@@ -691,7 +765,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Electric Arc",
@@ -707,7 +783,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Energy Field",
@@ -723,7 +801,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fire Bolt",
@@ -739,7 +819,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fist of Fury",
@@ -755,7 +837,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fool's Gold",
@@ -771,7 +855,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Ley Line Transmission",
@@ -787,7 +873,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Magic Net",
@@ -803,7 +891,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Multiple Image",
@@ -819,7 +909,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Repel Animals",
@@ -835,7 +927,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Shadow Meld",
@@ -851,7 +945,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Swim as a Fish",
@@ -867,7 +963,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Trance",
@@ -883,7 +981,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Armor Bizarre",
@@ -899,7 +999,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Calling",
@@ -915,7 +1017,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Charm",
@@ -931,7 +1035,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Circle of Flame",
@@ -947,7 +1053,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Distant Voice",
@@ -963,7 +1071,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Domination",
@@ -979,7 +1089,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Energy Disruption",
@@ -995,7 +1107,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Escape",
@@ -1011,7 +1125,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Eyes of Thoth",
@@ -1027,7 +1143,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Featherlight",
@@ -1043,7 +1161,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fly",
@@ -1059,7 +1179,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Heal Wounds",
@@ -1075,7 +1197,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"House of Glass",
@@ -1091,7 +1215,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Lifeblast",
@@ -1107,7 +1233,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sleep",
@@ -1123,7 +1251,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Superhuman Endurance",
@@ -1139,7 +1269,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Superhuman Strength",
@@ -1155,7 +1287,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Superhuman Speed",
@@ -1171,7 +1305,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Call Lightning",
@@ -1187,7 +1323,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Compulsion",
@@ -1203,7 +1341,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Cure Illness",
@@ -1219,7 +1359,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fire Ball",
@@ -1235,7 +1377,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Impervious to Energy",
@@ -1251,7 +1395,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Magic Pigeon",
@@ -1267,7 +1413,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Mask of Deceit",
@@ -1283,7 +1431,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Reduce Self",
@@ -1299,7 +1449,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sheltering Force",
@@ -1315,7 +1467,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Teleport (Lesser)",
@@ -1331,7 +1485,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Tongues",
@@ -1347,7 +1503,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Words of Truth",
@@ -1363,7 +1521,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Agony",
@@ -1379,7 +1539,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Anuimate Control Dead",
@@ -1395,7 +1557,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Ballistic Fire",
@@ -1411,7 +1575,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Constrain Being",
@@ -1427,7 +1593,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Dispel Magic Barriers",
@@ -1443,7 +1611,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Fly as the Eagle",
@@ -1459,7 +1629,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Globe of Silence",
@@ -1475,7 +1647,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Heal Self",
@@ -1491,7 +1665,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Invisibility (Superior)",
@@ -1507,7 +1683,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Life Drain",
@@ -1523,7 +1701,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Lightblade",
@@ -1539,7 +1719,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Metamorphosis (Animal)",
@@ -1555,7 +1737,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Purification (Food/Water)",
@@ -1571,7 +1755,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Wind Rush",
@@ -1587,7 +1773,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Commune with Spirits",
@@ -1603,7 +1791,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Exorcism",
@@ -1619,7 +1809,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Expel Demons",
@@ -1635,7 +1827,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Eyes of the Wolf",
@@ -1651,7 +1845,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Forcebonds",
@@ -1667,7 +1863,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Greater Healing",
@@ -1683,7 +1881,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Ley Line Tendril Bolts",
@@ -1699,7 +1899,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Lightning Arc",
@@ -1715,7 +1917,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Locate",
@@ -1731,7 +1935,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Luck Curse",
@@ -1747,7 +1953,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Magical-Adrenal Rush",
@@ -1763,7 +1971,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Metamorphosis (Human)",
@@ -1779,7 +1989,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Negate Magic",
@@ -1795,7 +2007,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Power Weapon",
@@ -1811,7 +2025,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Shockwave",
@@ -1827,7 +2043,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sickness",
@@ -1843,7 +2061,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Spoil (Water/Food)",
@@ -1859,7 +2079,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Wisps of Confusion",
@@ -1875,7 +2097,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Desiccate the Supernatural",
@@ -1891,7 +2115,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Dragon Fire",
@@ -1907,7 +2133,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Familiar Link",
@@ -1923,7 +2151,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Mute",
@@ -1939,7 +2169,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Protection Circle (Simple)",
@@ -1955,7 +2187,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Speed of the Snail",
@@ -1971,7 +2205,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Summon and Control Canine",
@@ -1987,7 +2223,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Wall of Defense",
@@ -2003,7 +2241,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Water to Wine",
@@ -2019,7 +2259,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Banishment",
@@ -2035,7 +2277,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Control Enslave Entity",
@@ -2051,7 +2295,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Deathword",
@@ -2067,7 +2313,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Giant",
@@ -2083,7 +2331,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Metamorphosis (Superior)",
@@ -2099,7 +2349,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Meteor",
@@ -2115,7 +2367,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Mystic Portal",
@@ -2131,7 +2385,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Plane Skip",
@@ -2147,7 +2403,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Speed Weapon",
@@ -2163,7 +2421,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Summon Control Rodents",
@@ -2179,7 +2439,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Summon Shadow Beast",
@@ -2195,7 +2457,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Super-Healing",
@@ -2211,7 +2475,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Anti-Magic Cloud",
@@ -2227,7 +2493,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Create Mummy",
@@ -2243,7 +2511,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Firequake",
@@ -2259,7 +2529,9 @@
     "usage3":"Offensive",
     "usage4":"",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Remove Curse",
@@ -2275,7 +2547,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Re-Open Gateway",
@@ -2291,7 +2565,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Rift Teleportation",
@@ -2307,7 +2583,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Amulet",
@@ -2323,7 +2601,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Calm Storms",
@@ -2339,7 +2619,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Create Zombies",
@@ -2355,7 +2637,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Ensorcel",
@@ -2371,7 +2655,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Summon and Control Entity",
@@ -2387,7 +2673,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Protection Circle (Superior)",
@@ -2403,7 +2691,9 @@
     "usage3":"",
     "usage4":"Defensive",
     "usage5":"",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Sanctum",
@@ -2419,7 +2709,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Close Rift",
@@ -2435,7 +2727,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Restoration",
@@ -2451,7 +2745,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Resurrection",
@@ -2467,7 +2763,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"",
-    "usage6":"Healing"
+    "usage6":"Healing",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Dimensional Portal",
@@ -2483,7 +2781,9 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   },
   {
     "invocationName":"Teleport (Superior)",
@@ -2499,6 +2799,8 @@
     "usage3":"",
     "usage4":"",
     "usage5":"Utility",
-    "usage6":""
+    "usage6":"",
+	"save":"",
+	"description":""
   }
 ]
