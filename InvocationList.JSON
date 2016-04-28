@@ -34,7 +34,7 @@
     "source":"Rifts Ultimate Edition",
     "page":198,
     "type":"",
-    "usage:["Utility.png"],
+    "usage":["Utility.png"],
 	"save":"None",
 	"description":"A magically induced trance which makes the spell caster appear to be dead. There is no breathing, pulse, heartbeat, or any other signs of life. While in the trance, the mage is quite helpless, unable to speak, move or invoke magic. Only minor physical sensations felt by the character are recognizable, like being jostled, carried or hearing voices, but no specific identification or memories are possible. The magic can be cancelled at will at any time."
   },
@@ -47,7 +47,7 @@
     "source":"Rifts Ultimate Edition",
     "page":198,
     "type":"",
-    "usage":[Utility.png],
+    "usage":["Utility.png"],
 	"save":"None",
 	"description":"A small globe or sphere of true daylight is magically created. The light is bright enough to light up a 12 foot area per each level of its creator's experience. Because it is daylight, it can word off vampires and most other types of undead and demons who fear or are hurt by sunlight, keeping them at bay just beyond the edge of the light. The creator of the globe can mentally move it along with himself, or send it up to thirty feed ahead. The maximum speed at which the globe can travel is equal to a speed attribute of 12."
   },
@@ -60,7 +60,7 @@
     "source":"Rifts Ultimate Edition",
     "page":198,
     "type":"",
-    "usage":[Utility.png],
+    "usage":["Utility.png"],
 	"save":"None",
 	"description":"The Lantern Light spell creates a small sphere of light that is less brilliant but longer lasting than the Globe of Daylight. It floats within 10 feel of the spell caster and can be mentally moved to hover at different angles and positions as the mage desires. This magic light may be thought of as a magical floating lantern or light bulb with a dimmer switch. The intensity of the light can be mentally adjusted to the equivalent of a 50 to 300 watt light bulb, whatever suits its creator. NOTE: This is not sunlight, so it will not damage vampires nor keep them at bay."
   },
@@ -75,15 +75,7 @@
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":"All things, organic and inorganic, have an aura. The aura has many features and distinctions, and can be used to see or sense things invisible to the eye. Seeing an aura will indicate the following:
-	* Estimate the general level of experience. Low (1-3), medium (4-7), high (8th and up).
-	* The presence of magic (no indication of what, or power level)
-	* The presence of psychic abilities. Low (Minor) or high (Major or Master). 
-	* High or Low base P.P.E.
-	* The presence of a possessing entity (does not indicate Psychic Possession or mind control. 
-	* Health. Sick, injured or completely well. 
-	* The presence of an unusual human aberration which indicates a serious illness or that the character is not human and may be a mutant, D-Bee, or demon, but does not reveal which. 
- 	NOTE: One can not use this spell to determine another character's alignment."
+	"description":"All things, organic and inorganic, have an aura. The aura has many features and distinctions, and can be used to see or sense things invisible to the eye. Seeing an aura will indicate the following: 1. Estimate the general level of experience. Low (1-3), medium (4-7), high (8th and up). 2. The presence of magic (no indication of what, or power level) 	3. The presence of psychic abilities. Low (Minor) or high (Major or Master). 	4. High or Low base P.P.E. 	5. The presence of a possessing entity (does not indicate Psychic Possession or mind control. 	6. Health. Sick, injured or completely well. 	7. The presence of an unusual human aberration which indicates a serious illness or that the character is not human and may be a mutant, D-Bee, or demon, but does not reveal which.  	NOTE: One can not use this spell to determine another character's alignment."
   },
   {
     "invocationName":"See The Invisible",
@@ -109,8 +101,7 @@
     "type":"",
     "usage":["Utility.png"],
 	"save":"None, except a psychic mind block or a protection from a magic pentacle which will prevent the spell from working on anyone in the circle. The psychic's equivalent power of sense evil is not blocked by the magic pentacle.",
-	"description":"The sense evil invocation will enable its spell caster to feel or sense the presence of supernatural evil. It will indicate approximately how many supernatural evil presences are within the 90 ft. area. It can also register the intensity of the evil and pinpoint the general location of the source(s) to a particular room(s), possessed object or person, or an approximate distance.
-Evil emanations from human beings are much less distinct, and cannot be sensed unless the source/person has an immediate evil intention."
+	"description":"The sense evil invocation will enable its spell caster to feel or sense the presence of supernatural evil. It will indicate approximately how many supernatural evil presences are within the 90 ft. area. It can also register the intensity of the evil and pinpoint the general location of the source(s) to a particular room(s), possessed object or person, or an approximate distance. Evil emanations from human beings are much less distinct, and cannot be sensed unless the source/person has an immediate evil intention."
   },
   {
     "invocationName":"Sense Magic",
@@ -162,12 +153,7 @@ Evil emanations from human beings are much less distinct, and cannot be sensed u
     "type":"",
     "usage":["Buff.png"],
 	"save":"None",
-	"description":" This spell enables the affected person to seemingly alter the color and pattern of his clothes and physical body, enabling him to blend into the surrounding environment. Movement destroys the effectiveness of this magic.
-
-    90% undetectable if not moving
-    70% undetectable if moving 2 feet per melee or slower
-    20% undetectable if moving 6 feet per melee
-    Totally ineffective if moving any faster. One final note, for those who are wondering. Yes, this spell, unlike a true chameleon, can do plaid. :)"
+	"description":" This spell enables the affected person to seemingly alter the color and pattern of his clothes and physical body, enabling him to blend into the surrounding environment. Movement destroys the effectiveness of this magic.     90% undetectable if not moving.     70% undetectable if moving 2 feet per melee or slower.     20% undetectable if moving 6 feet per melee.     Totally ineffective if moving any faster. One final note, for those who are wondering. Yes, this spell, unlike a true chameleon, can do plaid. :)"
   },
   {
     "invocationName":"Cleanse",
@@ -310,7 +296,7 @@ Evil emanations from human beings are much less distinct, and cannot be sensed u
     "type":"",
     "usage":["Defensive.png"],
 	"save":"Standard",
-	"description":"The utterance of this magic will turn/repel 1D6 animated dead per level of experience. This means that those creatures affected will turn and immediately leave the area without harming the spell caster or anyone near him. The dead turned will not come back for 24 hours. This magic only affects "animated" dead, and skeletons or corpses that are magically animated like marionettes, but will not affect vampires, zombies, or any corpse or skeleton possessed by a living entity."
+	"description":"The utterance of this magic will turn/repel 1D6 animated dead per level of experience. This means that those creatures affected will turn and immediately leave the area without harming the spell caster or anyone near him. The dead turned will not come back for 24 hours. This magic only affects animated dead, and skeletons or corpses that are magically animated like marionettes, but will not affect vampires, zombies, or any corpse or skeleton possessed by a living entity."
   },
   {
     "invocationName":"Armor of Ithan",
@@ -440,11 +426,7 @@ Evil emanations from human beings are much less distinct, and cannot be sensed u
     "type":"",
     "usage":["Utility.png", "Buff.png"],
 	"save":"None",
-	"description":" The spell caster and anything he is wearing or carrying at the time of theinvocation are turned completely invisible. Any object picked up after the character has become invisible remains visible. Likewise, any object on his person that is dropped becomes visible. Neither normal nor nightvision can detect invisibility; only beings who can naturally, psionically, or magically see the invisible can see the spell caster. Infrared and heat detectors can also pinpoint an invisible person.
-
-Although the invisible person is imperceptible to the eye, he still retains physical mass. This means he cannot go through walls nor can weapons pass harmlessly through him. The character still makes noise, leaves footprints, and physical and magical contacts/attacks still affect him as usual.
-
-While invisible, the mage can talk, weave spells, walk, climb, run, open doors, carry objects, and perform other acts of physical exertion, including combat, and remain invisible. The invisibility is terminated when the magic's duration has elapsed or the mage cancels the spell. Note: if cut, only the blood is visible."
+	"description":" The spell caster and anything he is wearing or carrying at the time of theinvocation are turned completely invisible. Any object picked up after the character has become invisible remains visible. Likewise, any object on his person that is dropped becomes visible. Neither normal nor nightvision can detect invisibility; only beings who can naturally, psionically, or magically see the invisible can see the spell caster. Infrared and heat detectors can also pinpoint an invisible person. Although the invisible person is imperceptible to the eye, he still retains physical mass. This means he cannot go through walls nor can weapons pass harmlessly through him. The character still makes noise, leaves footprints, and physical and magical contacts/attacks still affect him as usual. While invisible, the mage can talk, weave spells, walk, climb, run, open doors, carry objects, and perform other acts of physical exertion, including combat, and remain invisible. The invisibility is terminated when the magic's duration has elapsed or the mage cancels the spell. Note: if cut, only the blood is visible."
   },
   {
     "invocationName":"Life Source",
@@ -561,7 +543,7 @@ While invisible, the mage can talk, weave spells, walk, climb, run, open doors, 
     "type":"",
     "usage":["Debuff.png", "Utility.png"],
 	"save":"If a successful saving throw vs. magic is made, that player rolls 2D6 to see how many melee rounds it will take him to pull free. Those failing to make the saving throw are stuck for the entire duration of the spell. Effective even against borgs, power armor, and robots.",
-	"description":"The spell caster creates a sticky carpet, up to 10 ft. wide by 20 ft. long, that will adhere firmly to anyone who touches it. The victim will stay stuck until the carpet spell time elapses, or until the spell caster cancels the spell. The carpet can be cast on a floor, table, wall, ceiling, etc., or actually cast upon a person. The spell caster can cast this "super-flypaper" up to 90 feet away, and can alter the size and shape, without exceeding the stated limit of 200 square feet."
+	"description":"The spell caster creates a sticky carpet, up to 10 ft. wide by 20 ft. long, that will adhere firmly to anyone who touches it. The victim will stay stuck until the carpet spell time elapses, or until the spell caster cancels the spell. The carpet can be cast on a floor, table, wall, ceiling, etc., or actually cast upon a person. The spell caster can cast this super-flypaper up to 90 feet away, and can alter the size and shape, without exceeding the stated limit of 200 square feet."
   },
   {
     "invocationName":"Charismatic Aura",
@@ -574,12 +556,7 @@ While invisible, the mage can talk, weave spells, walk, climb, run, open doors, 
     "type":"",
     "usage":["Buff.png", "Utility.png"],
 	"save":"Standard",
-	"description":" A particularly handsome tool of deception, this magic can be cast upon the spell caster or another person. The spell instantly enhances that person's physical beauty by +8, increasing his charisma and charming all who behold him. Although the focal point of the spell is the person on whom it is cast, it effects everybody in a 60 foot radius from that person. Thus everybody in that radius must save vs. magic. Those who successfully save wll not be affected at all; those who fail to save are affected, and will respond accordingly.
-The person with the charismatic aura can invoke one of three responses: friendship/trust, power/fear, or successful deception.
-
-    Friendship/Trust: The first few words spoken will set up the response. Thus, a statement of friendship, peace, or trust will inspire those sentiments in everyone effected.
-    Power/Fear: A statement of power, anger, strength, or vile intent will strike awe and fear into everyone effected. Example: "Lay down your weapons and let us pass, or suffer my wrath!" Horror Factor: 13.
-    Successful Deception: This enables the person with the charismatic aura to convincingly lie like a master con-man. There is an 80% cahnce that those affected will believe anything he tells them. This response is triggered by a phrase like "Trust me..." or "I would never lie to you." "
+	"description":" A particularly handsome tool of deception, this magic can be cast upon the spell caster or another person. The spell instantly enhances that person's physical beauty by +8, increasing his charisma and charming all who behold him. Although the focal point of the spell is the person on whom it is cast, it effects everybody in a 60 foot radius from that person. Thus everybody in that radius must save vs. magic. Those who successfully save wll not be affected at all; those who fail to save are affected, and will respond accordingly. The person with the charismatic aura can invoke one of three responses: friendship/trust, power/fear, or successful deception.     Friendship/Trust: The first few words spoken will set up the response. Thus, a statement of friendship, peace, or trust will inspire those sentiments in everyone effected.      Power/Fear: A statement of power, anger, strength, or vile intent will strike awe and fear into everyone effected. Example: Lay down your weapons and let us pass, or suffer my wrath! Horror Factor: 13.     Successful Deception: This enables the person with the charismatic aura to convincingly lie like a master con-man. There is an 80% cahnce that those affected will believe anything he tells them. This response is triggered by a phrase like Trust me... or I would never lie to you. "
   },
   {
     "invocationName":"Cure Minor Disorders",
@@ -631,8 +608,7 @@ The person with the charismatic aura can invoke one of three responses: friendsh
     "type":"",
     "usage":["Offensive.png"],
 	"save":"Dodge",
-	"description":"Like the energy bolt, the mage can direct a bolt of fire. Bonus to strike os +4. The mage can adjust the damage between the MDC and SDC settings, both cost the same amount of PPE. 
-	Damage: 4D6 MDC, or 1D6 x 10 SDC."
+	"description":"Like the energy bolt, the mage can direct a bolt of fire. Bonus to strike os +4. The mage can adjust the damage between the MDC and SDC settings, both cost the same amount of PPE.  	Damage: 4D6 MDC, or 1D6 x 10 SDC."
   },
   {
     "invocationName":"Fist of Fury",
@@ -671,8 +647,7 @@ The person with the charismatic aura can invoke one of three responses: friendsh
     "type":"",
     "usage":["Healing.png"],
 	"save":"A Psionic mind block will block and destroy the message",
-	"description":"The spell caster can send a verbal and/or audio message directly along a ley line to another person so long as that person is located somewhere on the line. The best messages are brief ones under a hundred words to avoid overwhelming the recipient. Unfortunately, the message is a one-way transmission unless the other person is a Ley Line Walker or another mage with the Transmission spell. Range is limited only by the length of the ley line and teh people's positions on the line. The time lapse between sending and receiving a ley line transmission is only a matter of seconds. The message can be sent to several people (one per level of experience) at different locations, as long as they are all on the ley line.
-The only danger is that a telepath (psionic or magic) may be able to listen in on the message. There is a 20% chance that any psionic or magic character with the telepathy power will sense a ley line transmission coming through, and there is a 31% chance that they too can receive the message. There is no way for the sender to know if others have eavesdropped on his message. Nor is there any way to scramble the message."
+	"description":"The spell caster can send a verbal and/or audio message directly along a ley line to another person so long as that person is located somewhere on the line. The best messages are brief ones under a hundred words to avoid overwhelming the recipient. Unfortunately, the message is a one-way transmission unless the other person is a Ley Line Walker or another mage with the Transmission spell. Range is limited only by the length of the ley line and teh people's positions on the line. The time lapse between sending and receiving a ley line transmission is only a matter of seconds. The message can be sent to several people (one per level of experience) at different locations, as long as they are all on the ley line. The only danger is that a telepath (psionic or magic) may be able to listen in on the message. There is a 20% chance that any psionic or magic character with the telepathy power will sense a ley line transmission coming through, and there is a 31% chance that they too can receive the message. There is no way for the sender to know if others have eavesdropped on his message. Nor is there any way to scramble the message."
   },
   {
     "invocationName":"Magic Net",
@@ -724,7 +699,7 @@ The only danger is that a telepath (psionic or magic) may be able to listen in o
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":"This unique magic enables the mage to step into shadows, becoming totally invisible, even to those who can "see the invisible." The shadow must be at least five feet tall to become an effective hiding place. The shadow serves as a superior means of hiding or moving unseen. The mage can move, walk, or run through the length of shadow or from shadow to shadow. While in shadow darkness, the mage prowls at 60% proficiency (or at +15% to normal skill, whichever is higher). Intense light will dispel the shadow, leaving the mage revealed. Of course, sanctuary can be found by fleeing into another shadow. Feeble light, less than 10 torches or 300 watts, will only create more shadows. When hidden in shadow, the character is still susceptible to magic, psychic, and physical attacks, although attackers are -5 to strike him (because they cannot see him). Area affect attacks do not suffer any penalty. Infrared/thermal optics are the most effective means to see someone in a shadow."
+	"description":"This unique magic enables the mage to step into shadows, becoming totally invisible, even to those who can see the invisible. The shadow must be at least five feet tall to become an effective hiding place. The shadow serves as a superior means of hiding or moving unseen. The mage can move, walk, or run through the length of shadow or from shadow to shadow. While in shadow darkness, the mage prowls at 60% proficiency (or at +15% to normal skill, whichever is higher). Intense light will dispel the shadow, leaving the mage revealed. Of course, sanctuary can be found by fleeing into another shadow. Feeble light, less than 10 torches or 300 watts, will only create more shadows. When hidden in shadow, the character is still susceptible to magic, psychic, and physical attacks, although attackers are -5 to strike him (because they cannot see him). Area affect attacks do not suffer any penalty. Infrared/thermal optics are the most effective means to see someone in a shadow."
   },
   {
     "invocationName":"Swim as a Fish",
@@ -750,8 +725,7 @@ The only danger is that a telepath (psionic or magic) may be able to listen in o
     "type":"",
     "usage":["Debuff.png"],
 	"save":"Standard",
-	"description":"The enchantment places another person into a zombie-like state in which the entranced person is in a hypnotic daze, unaware of his environment or happenings around him. He can not formulate thoughts, use skills, or act on his own. While entranced, the individual is only aware of the enchanter's voice and will follow extremely simple commands. The entranced victim can NOT engage in any type of combat to any degree, nor any actions that require skill or thought, and offers no resistance. The magic is meant to incapacitate more than it is to enslave.
-While entranced, the person can not be made to reveal secrets, betray a friend, harm himself, or act against his alignment. All physical attributes function as if they are half what they really are; a speed of 10 wouldbe 5 while entranced. The victim of the trance will remember nothing of the events that occurred while entranced. Can not affect people inside power and MDC body armor, robots, or vehicles."
+	"description":"The enchantment places another person into a zombie-like state in which the entranced person is in a hypnotic daze, unaware of his environment or happenings around him. He can not formulate thoughts, use skills, or act on his own. While entranced, the individual is only aware of the enchanter's voice and will follow extremely simple commands. The entranced victim can NOT engage in any type of combat to any degree, nor any actions that require skill or thought, and offers no resistance. The magic is meant to incapacitate more than it is to enslave. While entranced, the person can not be made to reveal secrets, betray a friend, harm himself, or act against his alignment. All physical attributes function as if they are half what they really are; a speed of 10 wouldbe 5 while entranced. The victim of the trance will remember nothing of the events that occurred while entranced. Can not affect people inside power and MDC body armor, robots, or vehicles."
   },
   {
     "invocationName":"Armor Bizarre",
@@ -777,7 +751,7 @@ While entranced, the person can not be made to reveal secrets, betray a friend, 
     "type":"",
     "usage":["Utility.png"],
 	"save":"Standard",
-	"description":"The calling is like a limited form of telepathic communication in which the mage can mentally call a specific individual. To use "the call", the mystic must know the person's whole name (first and last), must have personally met the individual (even if only briefly), and must be within range. The call sends out a telepathic message to that particular person, calling him or her by full name, and leaves an impression of where the mage can be found. A typical call message will be something like "Steve Mitchell, come here," or "Trent Harris, get your ass over here NOW!" Only the individual to whom the message is made can hear it, and no one else. If a successful saving throw is made, the call and impression of location is only heard once. If the throw is not successful, the call will repeat itself over and over every 5 seconds (three times per melee) until either the spell elapses or the person goes to the mage. Nothing except a mind block can block out the call, and aspirin, psionic healing, or curative magic may be needed for those who fail the saving throw (rolling a d20 under the called person's ME attribute means no aspirin needed)."
+	"description":"The calling is like a limited form of telepathic communication in which the mage can mentally call a specific individual. To use the call, the mystic must know the person's whole name (first and last), must have personally met the individual (even if only briefly), and must be within range. The call sends out a telepathic message to that particular person, calling him or her by full name, and leaves an impression of where the mage can be found. A typical call message will be something like Steve Mitchell, come here, or Trent Harris, get your ass over here NOW! Only the individual to whom the message is made can hear it, and no one else. If a successful saving throw is made, the call and impression of location is only heard once. If the throw is not successful, the call will repeat itself over and over every 5 seconds (three times per melee) until either the spell elapses or the person goes to the mage. Nothing except a mind block can block out the call, and aspirin, psionic healing, or curative magic may be needed for those who fail the saving throw (rolling a d20 under the called person's ME attribute means no aspirin needed)."
   },
   {
     "invocationName":"Charm",
@@ -829,9 +803,7 @@ While entranced, the person can not be made to reveal secrets, betray a friend, 
     "type":"",
     "usage":["Debuff.png", "Utility.png"],
 	"save":"Standard",
-	"description":"Domination is another trance-like enchantment that enables the mystic to impose his will over the victim's, forcing the person to do his bidding. The victim of domination will appear to be acting oddly, dazed, confised, slow and unfriendly. The enchanted person has one goal: the fulfill the command of the mage. Under the enchantment of domination, the character's alignment does NOT apply. He will steal, lie, assist in crimes, kidnape, betray friends, reveal secrets, and so on. The only things the bewitched character will not do are commit suicide, inflict self-harm, or kill a friend or loved one. A good aligned person (principled, scrupulous, and possibly even unprincipled) cannot be made to kill anybody, it is too deeply rooted against their alignment.
-The enchanted person is not himself, and suffers the following penalties. Attacks per melee are half, speed is half, all skills are half their usual proficiency, speech is slow, and the person seems distracted or a little dazed.
-A successful saving throw vs. magic means the magic has no effect; the person is 100% his normal self. The effects of domination magic can not be faked, unless one successfully passes a Performance skill roll. Can not affect a person inside MDC body or power armor, robots, or vehicles."
+	"description":"Domination is another trance-like enchantment that enables the mystic to impose his will over the victim's, forcing the person to do his bidding. The victim of domination will appear to be acting oddly, dazed, confised, slow and unfriendly. The enchanted person has one goal: the fulfill the command of the mage. Under the enchantment of domination, the character's alignment does NOT apply. He will steal, lie, assist in crimes, kidnape, betray friends, reveal secrets, and so on. The only things the bewitched character will not do are commit suicide, inflict self-harm, or kill a friend or loved one. A good aligned person (principled, scrupulous, and possibly even unprincipled) cannot be made to kill anybody, it is too deeply rooted against their alignment. The enchanted person is not himself, and suffers the following penalties. Attacks per melee are half, speed is half, all skills are half their usual proficiency, speech is slow, and the person seems distracted or a little dazed. A successful saving throw vs. magic means the magic has no effect; the person is 100% his normal self. The effects of domination magic can not be faked, unless one successfully passes a Performance skill roll. Can not affect a person inside MDC body or power armor, robots, or vehicles."
   },
   {
     "invocationName":"Energy Disruption",
@@ -1078,8 +1050,7 @@ A successful saving throw vs. magic means the magic has no effect; the person is
     "type":"",
     "usage":["Healing.png"],
 	"save":"Special",
-	"description":"A useful tool for deception, it magically creates an illusionary mask over the person's own facial features. Age, gender, skin color, hair, hair length, and specific features are composed with thought. However, the magic is limited to facial features, and does not apply to any other part of the body. The mage can attempt to imitate a specific person's face, but has a per 20% + 5% per level of experience; if the character has the disguise skill, use that percentage instead.
-Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A successful save means the true features are seen, not the mask."
+	"description":"A useful tool for deception, it magically creates an illusionary mask over the person's own facial features. Age, gender, skin color, hair, hair length, and specific features are composed with thought. However, the magic is limited to facial features, and does not apply to any other part of the body. The mage can attempt to imitate a specific person's face, but has a per 20% + 5% per level of experience; if the character has the disguise skill, use that percentage instead. Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A successful save means the true features are seen, not the mask."
   },
   {
     "invocationName":"Reduce Self",
@@ -1196,7 +1167,7 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "type":"",
     "usage":["Utility.png"],
 	"save":"",
-	"description":"This invocation is useful for controlling lesser supernatural creatures. The enchantment forces the being to obey the arcanist to obey the arcanist to a very limited degree. Mainly, the mage can hold the "thing" at bay with an order like: "Back, stay back." "Go... begone." "Stay there... don't move." "No." "Stop." "Back away." No commands more elaborate than that will be obeyed. The constrain being incantation works in the same way as a cross holds a vampire at bay. As long as the mage and his allies stay out of the creature's reach, the magic will hold it at bay. If it can reach out and hurt somebody, it will. If it is attacked, the enchantment is broken, and it is free to lash out at everybody. Note: possessing entities and the greater supernatural beings are not affected by this magic, nor are non-supernatural D-Bees or aliens."
+	"description":"This invocation is useful for controlling lesser supernatural creatures. The enchantment forces the being to obey the arcanist to obey the arcanist to a very limited degree. Mainly, the mage can hold the thing at bay with an order like: Back, stay back. Go... begone. Stay there... don't move. No. Stop. Back away. No commands more elaborate than that will be obeyed. The constrain being incantation works in the same way as a cross holds a vampire at bay. As long as the mage and his allies stay out of the creature's reach, the magic will hold it at bay. If it can reach out and hurt somebody, it will. If it is attacked, the enchantment is broken, and it is free to lash out at everybody. Note: possessing entities and the greater supernatural beings are not affected by this magic, nor are non-supernatural D-Bees or aliens."
   },
   {
     "invocationName":"Dispel Magic Barriers",
@@ -1339,7 +1310,7 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":"The incantation enables the arcanist to see and speak with all types of "entities", including poltergeists, haunting spirits, trapped entities, imprisoned entities, and possessing entities. The ability to see and communicate with these ghostlike beings does not mean that they will obey the character, but a dialogue can be exchanged."
+	"description":"The incantation enables the arcanist to see and speak with all types of entities, including poltergeists, haunting spirits, trapped entities, imprisoned entities, and possessing entities. The ability to see and communicate with these ghostlike beings does not mean that they will obey the character, but a dialogue can be exchanged."
   },
   {
     "invocationName":"Exorcism",
@@ -1352,10 +1323,7 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "type":"",
     "usage":["Buff.png, Utility.png"],
 	"save":"Standard",
-	"description":" Exorcism is a powerful magic that forces a possessing supernatural being to relinquish its control over the enslaved person, animal or object. Forced out of its host body, the evil intelligence will try to possess any other human or animal within the immediate area (30ft. line of vision). The horrid thing gets two attempts at possession. Fortunately, the exorcism incantation protects the person who was its original victim with a bonus of +12 to save vs. possession and the mage conducting the exorcism with bonus of +6 to save vs. possession. Anybody else in the area has no extra bonus, and is in great peril. If the evil force fails in both of its attempts to take possession of a host body, roll percentile dice on the following:
-
-    1-52: The evil intelligence instantly returns to its home dimension.
-    53-00: The being can continue to exist in our world, but must immediately flee the area and not return for at least 6 months. "
+	"description":" Exorcism is a powerful magic that forces a possessing supernatural being to relinquish its control over the enslaved person, animal or object. Forced out of its host body, the evil intelligence will try to possess any other human or animal within the immediate area (30ft. line of vision). The horrid thing gets two attempts at possession. Fortunately, the exorcism incantation protects the person who was its original victim with a bonus of +12 to save vs. possession and the mage conducting the exorcism with bonus of +6 to save vs. possession. Anybody else in the area has no extra bonus, and is in great peril. If the evil force fails in both of its attempts to take possession of a host body, roll percentile dice on the following:     1-52: The evil intelligence instantly returns to its home dimension.      53-00: The being can continue to exist in our world, but must immediately flee the area and not return for at least 6 months. "
   },
   {
     "invocationName":"Expel Demons",
@@ -1381,14 +1349,7 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "type":"",
     "usage":["Buff.png", "Utility.png"],
 	"save":"",
-	"description":" Bestows the following abilities:
-
-    Nightvision: 60 ft.
-    See the invisible: 75%
-    Identify plants & fruits: 70%
-    Identify tracks: 85%
-    Track: 50%
-    Recognize Poison: 65% "
+	"description":" Bestows the following abilities:    1. Nightvision: 60 ft.   2. See the invisible: 75%    3. Identify plants & fruits: 70%   4. Identify tracks: 85%   5. Track: 50%    6. Recognize Poison: 65% "
   },
   {
     "invocationName":"Forcebonds",
@@ -1453,8 +1414,7 @@ Everyone encountering the person gets a save vs. magic, but at a -4 to do so. A 
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":"This spell enables the arcanist to sense the general location of his quarry. The location is limiteto a general area or environment, like a specific apartment building, house, shopping mall, church, park, on an airplane, etc.
-To locate a particular personthe arcanist must have either personally encountered the individual or a photograph must be provided. The success ratio for a spell is 41%; for a ritual, the success ratio is 89%, but this also requires an object owned by the person, or a lock of hair, fingernail clipping, of dried blood from the person."
+	"description":"This spell enables the arcanist to sense the general location of his quarry. The location is limiteto a general area or environment, like a specific apartment building, house, shopping mall, church, park, on an airplane, etc. To locate a particular personthe arcanist must have either personally encountered the individual or a photograph must be provided. The success ratio for a spell is 41%; for a ritual, the success ratio is 89%, but this also requires an object owned by the person, or a lock of hair, fingernail clipping, of dried blood from the person."
   },
   {
     "invocationName":"Luck Curse",
@@ -1779,10 +1739,7 @@ To locate a particular personthe arcanist must have either personally encountere
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":" This spell creates a dimensional rift in the fabric of space, allowing the spell caster to use it in the following ways:
-
-    Pass through solid walls. The caster has but to weave the spell targeting a particular, blocked area. The area will shimmer bright and suddenly, a portal or passage will appear as if cut out of the very stone. The portal can create a 12 ft. deep passage per each level of the spell caster in any substance.
-    Teleportation. The portal can also teleport someone to another location known to the spell caster instantly, as well as flawlessly. Limitations: as per the Teleport spell. The portal can be placed on a vertical wall. Looking into it reveals what will appear to be just the other side of the wall, even though the view may be completely incongruous to one's present location. Stepping through it will instantly place the person in that location. Range is a meagre 100 ft. per level of experience.  The major limitation of this spell, in all its modes of transport, is that the portal provides only one-way" - Size: 10 ft wide by 20 ft tall portal/opening
+	"description":" This spell creates a dimensional rift in the fabric of space, allowing the spell caster to use it in the following ways:    1. Pass through solid walls. The caster has but to weave the spell targeting a particular, blocked area. The area will shimmer bright and suddenly, a portal or passage will appear as if cut out of the very stone. The portal can create a 12 ft. deep passage per each level of the spell caster in any substance.    2. Teleportation. The portal can also teleport someone to another location known to the spell caster instantly, as well as flawlessly. Limitations: as per the Teleport spell. The portal can be placed on a vertical wall. Looking into it reveals what will appear to be just the other side of the wall, even though the view may be completely incongruous to one's present location. Stepping through it will instantly place the person in that location. Range is a meagre 100 ft. per level of experience.  The major limitation of this spell, in all its modes of transport, is that the portal provides only one-way. - Size: 10 ft wide by 20 ft tall portal/opening" 
   },
   {
     "invocationName":"Plane Skip",
@@ -1873,7 +1830,7 @@ To locate a particular personthe arcanist must have either personally encountere
     "type":"",
     "usage":["Utility.png"],
 	"save":"None",
-	"description":"The mummy invocation is a necromantic ritual that turns a corpse into one of the undead. The ritual involves treating pure linen strips of cloth with a mystic solution and wrapping the body in the cloth. The invocation brings to life (if you can call it that) a sort of humanoid robot that is devoid of emotions and fearless. Like a machine, the barely intelligent "thing" follows simple orders to the best of its ability. The mummy is incapable of understanding complex commands, or performing any skills. It is simply a lumbering corpse. Of course, this combined with its near indestructibility makes it an ideal guardian. A simple command like "Kill all who enter," (with the exception of the mage) is all it needs to know. A mummy cannot speak (or read) but grunts, growls, and howls. The most devastating aspect of the damnable creature is that it is dead, and feels no pain or emotions. Bullets, knives, clubs, and even most magic have no effect against the monster. Physical attacks simply nick or poke holes into a lifeless husk. Magic charms, sleeps, curses, illusions, illness, paralysis, and turn dead (the mummy is an undead) do nothing at all. Banishment does not work because the mummy is not actually a living supernatural creature. Negation simply does not work, and remove curse is not applicable. The only way to stop a mummy is to: 1) Trap or imprison it. 2) Blow it to bits. 3) Burn it up. Note: Protection circles will hold a mummy at bay. Fire is its one major weakness and it knows that, so a wall of fire, torch, or flamethrower may also keep it at bay. The magic is present in both the dead body and the linen wrappings. If the wrappings are destroyed, fire does double damage to the corpse, and even sunlight will inflict 3D6 points of damage per melee of exposure. - see book for mummy stats"
+	"description":"The mummy invocation is a necromantic ritual that turns a corpse into one of the undead. The ritual involves treating pure linen strips of cloth with a mystic solution and wrapping the body in the cloth. The invocation brings to life (if you can call it that) a sort of humanoid robot that is devoid of emotions and fearless. Like a machine, the barely intelligent thing follows simple orders to the best of its ability. The mummy is incapable of understanding complex commands, or performing any skills. It is simply a lumbering corpse. Of course, this combined with its near indestructibility makes it an ideal guardian. A simple command like Kill all who enter, (with the exception of the mage) is all it needs to know. A mummy cannot speak (or read) but grunts, growls, and howls. The most devastating aspect of the damnable creature is that it is dead, and feels no pain or emotions. Bullets, knives, clubs, and even most magic have no effect against the monster. Physical attacks simply nick or poke holes into a lifeless husk. Magic charms, sleeps, curses, illusions, illness, paralysis, and turn dead (the mummy is an undead) do nothing at all. Banishment does not work because the mummy is not actually a living supernatural creature. Negation simply does not work, and remove curse is not applicable. The only way to stop a mummy is to: 1) Trap or imprison it. 2) Blow it to bits. 3) Burn it up. Note: Protection circles will hold a mummy at bay. Fire is its one major weakness and it knows that, so a wall of fire, torch, or flamethrower may also keep it at bay. The magic is present in both the dead body and the linen wrappings. If the wrappings are destroyed, fire does double damage to the corpse, and even sunlight will inflict 3D6 points of damage per melee of exposure. - see book for mummy stats"
   },
   {
     "invocationName":"Firequake",
@@ -1938,7 +1895,7 @@ To locate a particular personthe arcanist must have either personally encountere
     "type":"",
     "usage":["Buff.png","Utility.png"],
 	"save":"None",
-	"description":" The "amulet" is a potent invocation that instills a medallion or charm with mystic properties that will protect an individual from magic or supernatural forces. The only requirement of the invocation is that the amulet be made of one metal purified by fire or made of semiprecious stone.  The sole purpose of the amulet is to protect. Protection is provided in several different ways. Any one of the following can be created by the amulet invocation. - see book for types of amulets that can be created"
+	"description":" The amulet is a potent invocation that instills a medallion or charm with mystic properties that will protect an individual from magic or supernatural forces. The only requirement of the invocation is that the amulet be made of one metal purified by fire or made of semiprecious stone.  The sole purpose of the amulet is to protect. Protection is provided in several different ways. Any one of the following can be created by the amulet invocation. - see book for types of amulets that can be created"
   },
   {
     "invocationName":"Calm Storms",
@@ -2066,7 +2023,7 @@ To locate a particular personthe arcanist must have either personally encountere
     "source":"Rifts Ultimate Edition",
     "page":225,
     "type":"",
-    "usage"":["Utility.png"],
+    "usage":["Utility.png"],
 	"save":"",
 	"description":"
   },
