@@ -985,7 +985,7 @@
     "type":"",
     "usage":["Utility.png"],
 	"save":"Standard",
-	"description":"The spell caster can implant a sudden desire or need in another person's mind. The focus of the irresistable impulse should be something reasonable and attainable, although the motive may seem quite irrational. The enchanted person will be consumed with the object or action of the implanted compulsion, whether it be somethng very simple, like the craving for a candy bar, or the need to visit somebody or something more extravagant. The victim of this enchantment will be obsessed with obtaining whatever it is for the full duration time of the incantation or untl it is attained. A "remove curse" will also negate the compulsion."
+	"description":"The spell caster can implant a sudden desire or need in another person's mind. The focus of the irresistible impulse should be something reasonable and attainable, although the motive may seem quite irrational. The enchanted person will be consumed with the object or action of the implanted compulsion, whether it be somethng very simple, like the craving for a candy bar, or the need to visit somebody or something more extravagant. The victim of this enchantment will be obsessed with obtaining whatever it is for the full duration time of the incantation or until it is attained. A remove curse will also negate the compulsion."
   },
   {
     "invocationName":"Cure Illness",
@@ -2025,7 +2025,7 @@
     "type":"",
     "usage":["Utility.png"],
 	"save":"",
-	"description":"
+	"description":""
   },
   {
     "invocationName":"Teleport (Superior)",
