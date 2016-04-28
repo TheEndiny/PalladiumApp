@@ -1,128 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Include meta tag to ensure proper rendering and touch zooming -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Include jQuery Mobile stylesheets -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<!-- Include the jQuery library -->
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- Include the jQuery Mobile library -->
+<link rel="stylesheet" href= "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="main.css">
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-<style>
-ul {list-style-type: none;}
-li {}
-img {margin-left:5px;margin-right:5px;}
-.spell {font-weight:bold;}
-#blah {font-weight:normal;}
-</style>
-
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-</script>
-<script>
-$(document).ready(function(){
-   // jQuery methods go here...
-});
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="javascript" src="https://s3.amazonaws.com/jakellat/episodes/InvocationList.js"></script>
+<script type="javascript" src="invocations.json"></script>
 <title></title>
 </head>
-
 <body>
 <p>Spells:</p>
 <p id="invocations"></p>
-
 <script>
+var InvocationList
+$(document).ready(function(){
+  var invoLength, text, clicktracker
+  $.getJSON("https://s3.amazonaws.com/jakellat/episodes/invocations.json?&callback=InvocationList", function(data){
+    InvocationList = data;
+    invoLength = InvocationList.length;
+    text = "<ul>";
+    for (var i = 0; i < invoLength; i++) { // loops through the array to show all of the entries in a list
+        text += "<li class='spell' id='spell-"+i+"'>" + invocationInfo(InvocationList[i]) + "<\/li>";
+    }
+    text += "<\/ul>";
+    document.getElementById("invocations").innerHTML = text; // pulls the info from the object and displays it on the page
+    $(".spell").on("click",function(e){ // lets us know if the description should be shown or hidden, based on the presence of clicktracker id
+        var writeDetails =  function(obj){ //quick routine for adding a sliding div to the page with details specific to the spell header clicked
+              clicktracker = obj.id; //set the clicktracker to this id, since it's being opened right now.
+              var details=getDetails(InvocationList[obj.id.substr(obj.id.indexOf("-")+1)]); //pull the details from the JSON
+              var el = document.createElement("DIV");
+              $(el).html(details);
+              el.className = "blah"; //used througout to use as a jQuery selector to target the details tab.
+              $(obj).append(el);
+              $(el).hide().slideToggle('slow');
+            }
+        if( e.target != this ) return false; //prevents the details from disappearing if you click on the detail text. Basically allowing for copy/pasting details
+        if($(".blah").length){ //check if a details tab is already open
+          $(".blah").slideToggle('slow', function(){$(this).remove();}); //slide the details closed, and delete it entirely.
+          if(this.id == clicktracker) { //check to see if we clicked on the same header that was open already. That will just close it, without opening a new one.
+            return;
+          } else {
+            writeDetails(this); //slide out the details tab
+          }
+        } else {
+          writeDetails(this); //slide out the details tab
+      }
+    });
+  }).fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+});
 function invocationInfo(object) { // this creates the full list of spell names, PPE cost, and usage icons
-	var fin = object.invocationName + " (" + object.cost + ")";
-	for(var x=0;x<object.usage.length;x++) {
-		var img = document.createElement("IMG");
-		img.src = object.usage[x];
-		fin += img.outerHTML;
-	}
-  return fin;
+  var fin = object.invocationName + " (" + object.cost + ")";
+  for(var x=0;x<object.usage.length;x++) {
+    var img = document.createElement("IMG");
+    img.src = object.usage[x];
+    fin += img.outerHTML;
+  }
+  return fin; 
 }
-
-var InvocationList, invoLength, text, clicktracker
-InvocationList = [
-  {   // spell info in JSON
-    "invocationName":"Blinding Flash",
-    "level":1,
-    "cost":"1",
-    "range":"60 feet",
-    "duration":"Instant",
-    "source":"Rifts Ultimate Edition",
-    "page":198,
-    "type":"",
-    "usage":["Debuff.png", "Utility.png",],
-	"save":"standard, -1 if 3 PPE are pumped into the spell",
-	"description":"This invocation creates a sudden burst of intense, white light, temporarily blinding everyone in its ten food radius. Victims are blinded for one to four melee rounds, and are -10 to strike, parry, and dodge. The chance of falling is 01-50% every 10 feel. The magic can be cast up to 60 feet away. Saving throw is standard; those who sucessfully save vs magic are not blinded. NOTE: Does not affect robotic, bionic, or cybernetic eyes."
-  },
-  {
-    "invocationName":"Cloud of Smoke",
-    "level":1,
-    "cost":"1",
-    "range":"90 feet",
-    "duration":"4 melees (one minute) per level of experience",
-    "source":"Rifts Ultimate Edition",
-    "page":198,
-    "type":"",
-    "usage":["Debuff.png","Utility.png"],
-	"save":"None",
-	"description":"This magic enables the mage to create a cloud of dense, black smoke (30x30x30 feet maximum size) up to ninety feet away. Victims caught in the cloud will be unable to see anything beyond the cloud, and their impaired vision allows them to see no more than three feet within the cloud, and even then that means only blurry shapes. While in the cloud, victime are -5 to strike, parry, dodge, disarm, and entangle."
-  },
-  {
-    "invocationName":"Death Trance",
-    "level":1,
-    "cost":"1",
-    "range":"self only",
-    "duration":"10 melee rounds (two and a half minutes) per level of experience.",
-    "source":"Rifts Ultimate Edition",
-    "page":198,
-    "type":"",
-    "usage":["Utility.png"],
-	"save":"None",
-	"description":"A magically induced trance which makes the spell caster appear to be dead. There is no breathink, pulse, heartbeat, or any other signs of life. While in the trance, the mage is quite helpless, unable to speak, move or invoke magic. Only minor physical sensations felt by the character are recognizable, like being jostled, carried or hearing voices, but no specific identification or memories are possible. The magic can be canceled at will at any time."
-  },
- 
-];
-
-invoLength = Object.keys(InvocationList).length;
-text = "<ul>";
-for (var i = 0; i < invoLength; i++) { // loops through the array to show all of the entries in a list
-    text += "<li class='spell' id='spell-"+i+"'>" + invocationInfo(InvocationList[i]) + "<\/li>";
+function getDetails(id) { //this takes in a
+        var table = document.createElement("TABLE");
+        var arr = new Array();
+        arr.push("<tr><td class='label'>Level:<\/td><td>" + id.level + "<td><\/tr>");
+        arr.push("<tr><td class='label'>Range:<\/td><td>" + id.range + "<td><\/tr>");
+        arr.push("<tr><td class='label'>Duration:<\/td><td>" + id.duration + "<td><\/tr>");
+        arr.push("<tr><td class='label'>Source:<\/td><td>" + id.source + " pg." + id.page + "<td><\/tr>");
+        arr.push("<tr><td class='label'>Save:<\/td><td>" + id.save + "<td><\/tr>");
+        arr.push("<tr><td colspan=3><b>Description: <\/b>" + id.description + "<\/td><\/tr>");
+        for(var y=0;y<arr.length;y++) {
+          var stuff = $.parseHTML(arr[y]);
+          $(table).append(stuff);
+        }
+        return table;
 }
-text += "<\/ul>";
-document.getElementById("invocations").innerHTML = text; // pulls the info from the object and displays it on the page
-</script>
-
-<script>
-function getDetails(id) {
- return "Level: " + id.level + " Range: " + id.range + " Duration: " + id.duration + " Source: " + id.source + " " + id.page + " Save: " + id.save + " Description: " + id.description;
-}
-
-$(".spell").on("click",function(){ // lets us know if the description should be shown or hidden, based on the presence of clicktracker id
-	if($("#blah").length){ 
-		$("#blah").remove();
-		if(this.id == clicktracker) {
-			return;
-		} else {
-			clicktracker = this.id;
-			var details=getDetails(this.id);
-			$(this).append(details);
-		}
-	} else {
-		clicktracker = this.id;
-		var details=getDetails(InvocationList[this.id.substr(-1)]);
-		var tex = document.createTextNode(details);
-		var el = document.createElement("DIV");
-		el.id = "blah";
-			el.appendChild(tex);
-		$(this).append(el);
-	}
 });
 </script>
-
 </body>
 </html>

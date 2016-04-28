@@ -10,11 +10,3 @@ to do:
      * some spells shoudl have the duration changed from minutes to numer of melees
 * let the App pull from an external JSON
 * whatever else people want to add.
-
-
-Wish List
-
-* add a few simple filters
-* ability to create a "spellbook" that loads only known spells for different characers
-* adding other useful features like health/PPE tracker, skill calculator,
-* Adding other info like Psionics, spells from additional books, common equipment, etc...
