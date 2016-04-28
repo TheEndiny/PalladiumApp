@@ -12,7 +12,12 @@
 
 <style>
 ul {list-style-type: none;}
+li {}
+img {margin-left:5px;margin-right:5px;}
+.spell {font-weight:bold;}
+#blah {font-weight:normal;}
 </style>
+
 <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
 </script>
@@ -94,7 +99,7 @@ document.getElementById("invocations").innerHTML = text; // pulls the info from 
 
 <script>
 function getDetails(id) {
- return id.description;
+ return "Level: " + id.level + " Range: " + id.range + " Duration: " + id.duration + " Source: " + id.source + " " + id.page + " Save: " + id.save + " Description: " + id.description;
 }
 
 $(".spell").on("click",function(){ // lets us know if the description should be shown or hidden, based on the presence of clicktracker id
