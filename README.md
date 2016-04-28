@@ -4,7 +4,6 @@ Throwing it here so anyone can look at it, or contribute if they are bored. Work
 
 to do:
 * Make it look pretty
-* when clicked, have it pull all info (right not just description, need to pull range, level, etc...)
 * Update JSON 
      * inputting descriptions and if the spell allows for a saving throw
      * Change range and duration fields to reflect level increases for some spells
