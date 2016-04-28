@@ -1,0 +1,21 @@
+.spell {
+    background-image: linear-gradient(to bottom, #f27e32 0%, #8f1d8f 100%);
+    border: 1px double black;
+    border-radius: 5px;
+    color: white;
+    width: 95%;
+}
+.blah {
+    background: whitesmoke none repeat scroll 0 0;
+    border: 4px double;
+    color: black;
+    font-family: times new roman;
+    text-shadow: none;
+}
+.label {
+    width: 5%;
+    font-weight: bold;
+}
+ul {
+        list-style-type: none;
+} 
