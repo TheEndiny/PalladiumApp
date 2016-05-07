@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<head>
+  <script src="chance.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="roll.css"/>
+  <script type='text/javascript'>
+    var numDice = ["d4","d6","d8","d10","d100","d12","d20","d30"];
+    function createButtons(assignment){
+      function createArrowButton(direction, assignment){
+        var link = document.createElement("a")
+        link.href="#"
+        $(link).addClass("arrow "+direction);
+        $(link).attr("assignment", assignment);
+        return link;
+      }
+      var container = document.createElement("DIV")
+      $(container).addClass("dice "+assignment);
+      var mainButton = document.createElement("BUTTON");
+      mainButton.className = "diceTop";
+      $(mainButton).append("<img class='deece' src='images/"+assignment+".jpg' assignment="+assignment+" />")
+      var up = createArrowButton("up",assignment);
+      var down = createArrowButton("down",assignment);
+      var diceBottom = document.createElement("DIV");
+      diceBottom.className = "diceBottom";
+      $(diceBottom).append(down);
+      $(diceBottom).append(up);
+      $(container).append(mainButton);
+      $(container).append(diceBottom);
+      return container;
+    }
+    function randomLetter(){
+      var letter = chance.character({pool:'ABCDEFGHIJKLMNOPQRSTUVWXYZ'});
+      $("#letterResult").empty().append(document.createTextNode(letter));
+    }
+    function randomNamePart(obj) {
+      var id
+        var gen = $("#namePartGender :radio:checked").val();
+        var options = { gender: gen };
+        if(!gen||gen=="all") var options = "";
+
+      switch(obj.id){
+        case "suffix": id=chance.suffix(options); break;
+        case "prefix": id=chance.prefix(options); break;
+        case "first": id=chance.first(options); break;
+        case "last": id=chance.last(options); break;
+      }
+      $("#namePartResult").empty().append(document.createTextNode(id));
+    }
+    function randomGender() {
+      var gen = chance.gender();
+      $("#genderResult").empty().append(document.createTextNode(gen));
+    }
+    function randomDirection(grain){
+      //allowed grains: 4,8,card,cardinal,basic,extended
+      var basic = ["N","E","W","S"];
+      var extended = ["N","E","W","S","NE","NW","SW","SE"];
+      var result
+      if(grain=="card"||grain==4||grain=="basic"){
+        result = chance.pickone(basic)
+      } else if(grain=="cardinal"||grain==8||grain=="extended") {
+        result = chance.pickone(extended)
+      } else {
+        console.error("Failed. Grain should only be 4 or 8"); return;
+      }
+
+      $("#directionResult").empty().append(document.createTextNode(result))
+    }
+    function randomAge(grain){
+      //allowed grains: any, child, teen, adult, senior
+      var result = 0;
+      if(!grain||grain == "any") { result = chance.age();} else {result = chance.age({type: grain});}
+      $("#ageResult").empty().append(document.createTextNode(result))
+    }
+    function writeDice(amount,class_name){
+      var diceResult = document.createTextNode(chance.rpg(+amount+class_name));
+      var sum = diceResult.textContent.split(",").reduce(function(pv, cv) { return parseInt(pv) + parseInt(cv); }, 0);
+      if(diceResult.textContent != sum) diceResult = diceResult.textContent + " = " + sum;
+      $("#diceResult").empty().append(diceResult)
+      resize();
+    }
+    function resize(){
+      $('#diceResult').height(2);
+      $('#diceResult').css("resize:none;")
+        var contentHeight = $('#diceResult')[0].scrollHeight;
+        if (contentHeight<80) contentHeight = 80;
+        if (contentHeight > $('#diceResult').height())
+            $('#diceResult').height(contentHeight);
+  }
+    $(document).ready(function(){
+      numDice.forEach(function(item){
+        var widget = createButtons(item);
+        $("#standard").append(widget)
+      })
+      $(".diceTop").on("click", function(e){
+        //e.target==this;
+        var class_name = $(this).parent().attr('class').split(' ')[0];
+        if(class_name == "spinner") return true;
+        var amount = $("input[name='"+class_name+"']").val();
+        amount = amount==undefined?-2:amount;
+        if(amount > 0 ){
+          writeDice(amount,class_name);
+        }else if(!amount||amount==0){
+          writeDice(1,class_name);
+        }else if(class_name=="card"||class_name=="cardinal") {
+          randomDirection(class_name);
+        } else if (class_name=="age") {
+          randomAge( $(this).parent().attr('class').split(' ')[1]);
+        } else if (class_name=="letter") {
+          randomLetter();
+        } else if (class_name=="gender") {
+          randomGender();
+        }
+      }).button({text: false});
+      $(".namePart").button().click(function(e){
+        randomNamePart(this)
+      });
+      $(function() {
+  $( "#mix,#clear" )
+    .button()
+    .click(function( event ) {
+      event.preventDefault();
+      if(this.className.split(" ")[0] == "diceTop") return;
+      if(this.name=="clear") {
+        $(".spinner").each(function(index) {
+          this.value = 0;
+        });
+        return;
+      }
+      var collection = new Array();
+      $(".spinner").each(function(index) {
+        if(!this.value||this.value == 0) return true;
+        collection.push(chance.rpg(this.value+this.name));
+      });
+      var displayResults = ""
+      var finalResult = 0;
+      $.each(collection, function(index) {
+        var sum = this.reduce(function(pv, cv) {return parseInt(pv) + parseInt(cv); }, 0);
+        collection[index] = collection[index]!=sum?collection[index] + " = " + sum:collection[index];
+        displayResults += collection[index] + "\n";
+        finalResult += sum;
+      });
+      displayResults = displayResults + "Final Total: " + finalResult;
+      $("#diceResult").empty().append(displayResults);
+      resize();
+    });
+});
+$(".up").button({
+  text: false,
+  icons: {
+    primary: "ui-icon-seek-next"
+  }
+}).on("click",function(e){
+  var target = e.currentTarget.attributes.assignment.textContent
+  var curNum = parseInt(parseInt($("#"+target).text()))
+  if(!$("#"+target).text()) {
+    $("img[assignment="+target+"]").after('<span id="'+target+'" class="overlay" style="">1</span>'); //img assignment = assignment
+    $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
+  } else if (curNum < 9) {
+    $("#"+target).text(curNum+1)
+    $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
+  } else {
+    $("#"+target).text(curNum+1)
+    $(this).button("option", "disabled", true);
+  }
+});
+$(".down").button({
+  text: false,
+  disabled: true,
+  icons: {
+    primary: "ui-icon-seek-prev"
+  }
+}).on("click",function(e){
+  var target = e.currentTarget.attributes.assignment.textContent
+  var curNum = parseInt(parseInt($("#"+target).text()))
+  if (curNum >1) {
+    $("#"+target).text(curNum-1)
+    $(this).parentsUntil(".dice").children(".up").button("option", "disabled", false)
+  } else if(curNum > 0){
+    $("#"+target).text(curNum-1)
+    $(this).button("option", "disabled", true);
+    $("#"+target).remove();
+  }
+});
+$("#standard").buttonset();
+$(".incl").button({icons: { primary: "ui-icon-check" }}).click(function() {
+      var options;
+      if ( $( this ).next().attr('aria-pressed') == "true" ) {
+        options = {
+          icons: { primary: "ui-icon-check" }
+        };
+      } else {
+        options = {
+          icons: {primary: "ui-icon-circle-check"}
+        };
+      }
+      $( this ).button( "option", options );
+    });
+});
+  </script>
+  <style>
+
+
+
+  </style>
+</head>
+<body>
+<div id="standard">
+  <textarea id="diceResult" class="result"></textarea>
+</div>
+
+<div id="person">
+  <div id="directions">
+    <div class="card dice"><button class="diceTop"><img class="deece" src="images/card.png" /></button><div class="diceBottom"></div></div>
+    <div class="cardinal dice"><button class="diceTop"><img class="deece" src="images/cardinal.png" /></button><div class="diceBottom"></div></div>
+    <textarea id="directionResult" class="result"></textarea>
+  </div>
+  <div id="names">
+    <div id="ngdice">
+    <div class="letter dice"><button class="diceTop"><img class="deece" src="images/letter.jpeg" /></button><div class="diceBottom"></div></div>
+    <textarea id="letterResult" class="result"></textarea>
+    <div class="gender dice"><button class="diceTop"><img class="deece" src="images/gender.jpg" /></button><div class="diceBottom"></div></div>
+    <textarea id="genderResult" class="result"></textarea>
+  </div>
+  <div id="ages">
+    <div class="age any dice"><button class="diceTop"><span style="font-size:15px">All <br>ages </span></button><div class="diceBottom"></div></div>
+    <div class="age child dice"><button class="diceTop"><span style="font-size:15px">Child's<br>age</span></button><div class="diceBottom"></div></div>
+    <div class="age teen dice"><button class="diceTop"><span style="font-size:15px">Teen's<br>age</span></button><div class="diceBottom"></div></div>
+    <div class="age adult dice"><button class="diceTop"><span style="font-size:15px">Adult's<br>age</span></button><div class="diceBottom"></div></div>
+    <div class="age senior dice"><button class="diceTop"><span style="font-size:15px">Senior's<br>age</span></button><div class="diceBottom"></div></div>
+    <textarea id="ageResult" class="result"></textarea>
+  </div>
+  <div id="toolbar" class="ui-widget-header ui-corner-all">
+
+    <span id="namePartGender">
+      <input type="radio" id="namePartEither" name="npg" value="all"  checked="checked"><label for="namePartEither">Either Gender</label>
+      <input type="radio" id="namePartMale" name="npg" value="male"><label for="namePartMale">Male Name</label>
+      <input type="radio" id="namePartFemale" name="npg" value="female"><label for="namePartFemale">Female Name</label>
+    </span>
+    <span id="nameParts">
+    <button id="prefix" class="namePart">Prefix</button>
+    <button id="first" class="namePart">First Name</button>
+    <button id="last" class="namePart">Last Name</button>
+    <button id="suffix" class="namePart">Suffix</button>
+    <textarea id="namePartResult"></textarea>
+  </span>
+  <button id="full">Full Name</button>
+  <span id="nameGender">
+    <input type="radio" id="nameEither" name="ng" value="all" checked="checked"><label for="nameEither">Either Gender</label>
+    <input type="radio" id="nameMale" name="ng" value="male"><label for="nameMale">Male Name</label>
+    <input type="radio" id="nameFemale" name="ng" value="female"><label for="nameFemale">Female Name</label>
+  </span>
+  <br>
+  <input type="checkbox" id="incSuffix" class="incl ui-icon-circle-check"><label for="incSuffix">Include Suffix?</label>
+  <input type="checkbox" id="incPrefix" class="incl ui-icon-circle-check"><label for="incPrefix">Include Prefix?</label>
+  <input type="checkbox" id="incMiddle" class="incl ui-icon-circle-check"><label for="incMiddle">Include Middle Name?</label>
+</div>
+
+  </div>
+</div>
+</body>
+</html>

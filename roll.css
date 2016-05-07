@@ -1,0 +1,41 @@
+.deece {
+    height: 40px;
+    width: 40px;
+}
+.down {
+    border-bottom-left-radius: 20px;
+    height: 15px;
+}
+.up {
+    border-bottom-right-radius: 20px;
+    height: 15px;
+}
+.dice {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 5%;
+}
+.diceTop {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+.diceBottom {
+  margin-top: -4px;
+}
+.overlay {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  text-shadow: 0 0 5px black;
+  color:white;
+  opacity: 0.9;
+  background-color: lightgray;
+  width:100%;
+}
+.arrow {
+  width: 50%;
+}
