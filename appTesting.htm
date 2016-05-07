@@ -2,39 +2,35 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href= "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <link rel="stylesheet" href="main.css">
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="javascript" src="https://s3.amazonaws.com/jakellat/episodes/InvocationList.js"></script>
-<script type="javascript" src="invocations.json"></script>
+<script src="dexie.min.js"></script>
 <title></title>
 </head>
 <body>
+<button onclick="db.delete().then(function(){window.location.reload()});">Delete Database and reload page</button>
 <p>Spells:</p>
 <p id="invocations"></p>
 <script>
-var InvocationList
+var db
+var offset = 0;
+var pageSize = 10;
 $(document).ready(function(){
-  var invoLength, text, clicktracker
-  $.getJSON("https://s3.amazonaws.com/jakellat/episodes/invocations.json?&callback=InvocationList", function(data){
-    InvocationList = data;
-    invoLength = InvocationList.length;
-    text = "<ul>";
-    for (var i = 0; i < invoLength; i++) { // loops through the array to show all of the entries in a list
-        text += "<li class='spell' id='spell-"+i+"'>" + invocationInfo(InvocationList[i]) + "<\/li>";
-    }
-    text += "<\/ul>";
-    document.getElementById("invocations").innerHTML = text; // pulls the info from the object and displays it on the page
-    $(".spell").on("click",function(e){ // lets us know if the description should be shown or hidden, based on the presence of clicktracker id
-        var writeDetails =  function(obj){ //quick routine for adding a sliding div to the page with details specific to the spell header clicked
+    initialize();
+    db.open();
+    populateInvocations(offset, pageSize);
+});
+    $("#invocations").on("click",".spell", function(e){ // lets us know if the description should be shown or hidden, based on the presence of clicktracker id
+        function writeDetails (obj) { //quick routine for adding a sliding div to the page with details specific to the spell header clicked
               clicktracker = obj.id; //set the clicktracker to this id, since it's being opened right now.
-              var details=getDetails(InvocationList[obj.id.substr(obj.id.indexOf("-")+1)]); //pull the details from the JSON
-              var el = document.createElement("DIV");
-              $(el).html(details);
-              el.className = "blah"; //used througout to use as a jQuery selector to target the details tab.
-              $(obj).append(el);
-              $(el).hide().slideToggle('slow');
+                var x = db.invocations.get(parseInt(obj.id), function(item){
+                  var details=getDetails(item);
+                  var el = document.createElement("DIV");
+                  $(el).html(details);
+                  el.className = "blah"; //used througout to use as a jQuery selector to target the details tab.
+                  $(obj).append(el);
+                  $(el).hide().slideToggle('slow');
+                });
             }
         if( e.target != this ) return false; //prevents the details from disappearing if you click on the detail text. Basically allowing for copy/pasting details
         if($(".blah").length){ //check if a details tab is already open
@@ -46,22 +42,82 @@ $(document).ready(function(){
           }
         } else {
           writeDetails(this); //slide out the details tab
-      }
+        }
     });
-  }).fail(function( jqxhr, textStatus, error ) {
-    var err = textStatus + ", " + error;
-    console.log( "Request Failed: " + err );
-});
-function invocationInfo(object) { // this creates the full list of spell names, PPE cost, and usage icons
-  var fin = object.invocationName + " (" + object.cost + ")";
-  for(var x=0;x<object.usage.length;x++) {
-    var img = document.createElement("IMG");
-    img.src = object.usage[x];
-    fin += img.outerHTML;
-  }
-  return fin; 
-}
-function getDetails(id) { //this takes in a
+    function invocation(props) { //object
+      this.key = props.key;
+      this.invocationName = props.invocationName;
+      this.level = props.level;
+      this.cost = props.cost;
+      this.range = props.range;
+      this.duration = props.duration;
+      this.source = props.source;
+      this.page = props.page;
+      this.type = props.type;
+      this.usage = props.usage;
+      this.save = props.save;
+      this.description = props.description;
+    }
+    invocation.prototype.edit = function() {
+      return db.invocations.put(this);
+    }
+    function initialize() {
+      db = new Dexie("palladiumApp")
+      db.version(1).stores({
+        invocations: "++key,invocationName,level,cost,range,duration,source,page,type,*usage,save,description"
+      });
+      db.invocations.mapToClass(invocation);
+      db.on('ready', function(){
+        return db.invocations.count(function(count){
+          if (count > 0) {
+            console.log("Already populated")
+          } else {
+            console.log("Populating")
+            return new Dexie.Promise(function (resolve, reject){
+              $.getJSON("https://s3.amazonaws.com/jakellat/episodes/invocations.json?&callback=InvocationList", function(data){
+                resolve(data);
+              }).fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                console.log( "Request Failed: " + err );
+                reject(err);
+              });
+            }).then(function (data){
+              return db.transaction('rw', db.invocations, function (){
+                  db.invocations.bulkAdd(data);
+              });
+            }).catch('NoSuchDatabaseError', function(e) {
+              // Database with that name did not exist
+              console.error ("Database not found");
+            }).catch(function (e) {
+              console.error ("Oh uh: " + e);
+            });
+          }
+        })
+      })
+    }
+    function invocationInfo(object) { // this creates the full list of spell names, PPE cost, and usage icons
+      var fin = object.invocationName + " (" + object.cost + ")";
+      for(var x=0;x<object.usage.length;x++) {
+        var img = document.createElement("IMG");
+        img.src = object.usage[x];
+        fin += img.outerHTML;
+      }
+      return fin;
+    }
+    function populateInvocations(os, ps) {
+      var i = 0;
+      db.invocations.offset(os).limit(ps).each(function(invo){
+        var info = invocationInfo(invo)
+        var li = document.createElement("LI")
+        $(li).addClass('spell');
+        li.id = invo.key;
+        li.innerHTML = info;
+        $("#invocations").append(li);
+        i++;
+      })
+      offset = os + ps;
+    }
+    function getDetails(id) { //this takes in a
         var table = document.createElement("TABLE");
         var arr = new Array();
         arr.push("<tr><td class='label'>Level:<\/td><td>" + id.level + "<td><\/tr>");
@@ -75,8 +131,22 @@ function getDetails(id) { //this takes in a
           $(table).append(stuff);
         }
         return table;
+      }
+
+function prev() {
+  offset = offset - (pageSize*2);
+  if(offset<0) offset = 0;
+    $("#invocations").empty();
+    populateInvocations(offset, pageSize);
+  $("#invocations").removeAttr( "style" ).hide().fadeIn();
 }
-});
+function next() {
+    $("#invocations").empty();
+    populateInvocations(offset, pageSize);
+  $("#invocations").removeAttr( "style" ).hide().fadeIn();
+}
 </script>
+<button id="prev" class="pageButton" onclick="prev()"><</button>
+<button id="next" class="pageButton" onclick="next()">></button>
 </body>
 </html>
