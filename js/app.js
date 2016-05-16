@@ -91,7 +91,7 @@ function invocationInfo(object) { // this creates the full list of spell names, 
   var fin = object.invocationName + " (" + object.cost + ")";
   for(var x=0;x<object.usage.length;x++) {
     var img = document.createElement("IMG");
-    img.src = object.usage[x];
+    img.src = "images/"+object.usage[x];
     fin += img.outerHTML;
   }
   return fin;
