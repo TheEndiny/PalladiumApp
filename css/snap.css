@@ -51,13 +51,6 @@ html, body {
        -o-transition: width 0.3s ease;
           transition: width 0.3s ease;
 }
-
-.snap-drawer-left {
-  left: 0;
-  z-index: 1;
-  height: 100%;
-}
-
 .drawers {
   display: none;
 }
