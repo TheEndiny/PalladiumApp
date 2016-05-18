@@ -3,11 +3,11 @@
     width: 40px;
 }
 .down {
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px  !important;
     height: 15px;
 }
 .up {
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px !important;
     height: 15px;
 }
 .dice {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
-  <script src="chance.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/roll.css"/>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="roll.css"/>
+  <script src="js/chance.js"></script>
   <script type='text/javascript'>
     var numDice = ["d4","d6","d8","d10","d100","d12","d20","d30"];
     function createButtons(assignment){
@@ -28,6 +28,11 @@
       $(diceBottom).append(up);
       $(container).append(mainButton);
       $(container).append(diceBottom);
+      $(container).on("click", function(target) {
+        assignment = $(target.currentTarget).attr("class").split(' ')[1];
+        amount = $("#"+assignment).text()>1?$("#"+assignment).text():1;
+        writeDice(amount,assignment);
+      });
       return container;
     }
     function randomLetter(){
