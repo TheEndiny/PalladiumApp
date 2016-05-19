@@ -1,41 +1,68 @@
+body {
+  background-color: lightgray;
+  font-size: 16px;
+}
 .deece {
-    height: 40px;
-    width: 40px;
+	height: 40px;
+	width: 40px;
 }
 .down {
-    border-bottom-left-radius: 20px  !important;
-    height: 15px;
+	border-bottom-left-radius: 20px !important;
+	height: 15px;
 }
 .up {
-    border-bottom-right-radius: 20px !important;
-    height: 15px;
+	border-bottom-right-radius: 20px !important;
+	height: 15px;
 }
 .dice {
-    float: left;
-    overflow: hidden;
-    position: relative;
-    width: 5%;
+	float: left;
+	overflow: hidden;
+	position: relative;
 }
 .diceTop {
-    display: block;
-    max-width: 100%;
-    min-width: 100%;
-    height: auto;
+	display: block;
+	height: auto;
+	max-width: 100%;
+	min-width: 100%;
 }
 .diceBottom {
-  margin-top: -4px;
+	margin-left: 3px;
+	margin-top: -3px;
 }
 .overlay {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translateX(-50%) translateY(-50%);
-  text-shadow: 0 0 5px black;
-  color:white;
-  opacity: 0.9;
-  background-color: lightgray;
-  width:100%;
+	background-color: lightgray;
+	color: white;
+	left: 50%;
+	opacity: 0.9;
+	position: absolute;
+	text-shadow: 0 0 5px black;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
 }
 .arrow {
-  width: 50%;
+	width: 45%;
+}
+.result {
+  background-color: white;
+  border: 4px groove;
+  border-radius: 20px;
+  height: 80px;
+  padding: 1px 0 0 4px;
+  width: 98.5vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.section {
+	clear: both;
+	float: left;
+	margin: 4px;
+	position: relative;
+}
+.inner-section {
+	float: left;
+}
+.highlight {
+    border-color: yellow !important;
 }
