@@ -47,7 +47,7 @@ body {
   background-color: white;
   border: 4px groove;
   border-radius: 20px;
-  height: 80px;
+  min-height: 80px;
   padding: 1px 0 0 4px;
   width: 98.5vw;
   align-items: center;
@@ -65,4 +65,33 @@ body {
 }
 .highlight {
     border-color: yellow !important;
+}
+.rotatedButton {
+    float: right;
+}
+.rotated {
+    display: block;
+    font-size: 59%;
+    transform: rotate(90deg);
+    border-bottom-width: 0;
+    border-right-width: 0;
+    margin: 24px -38px;
+    padding-bottom: 0;
+}
+
+#customNumber {
+    float: right;
+    left: 80px;
+    position: relative;
+    z-index: 5;
+}
+#customInteger {
+    position: absolute;
+    top: 55px;
+}
+#customDiceEntry {
+    font-size: 90%;
+    height: 51px;
+    position: absolute;
+    width: 150px;
 }

@@ -23,6 +23,39 @@ function createButtons(assignment,type = assignment,counter = false){
     }
     var up = createArrowButton("up",assignment);
     var down = createArrowButton("down",assignment);
+    $(down).button({
+      text: false,
+      disabled: true,
+      icons: {primary: "ui-icon-seek-prev"}
+    }).on("click",function(e){
+      var target = e.currentTarget.attributes.assignment.textContent
+      var curNum = parseInt(parseInt($("#"+target).text()))
+      if (curNum >1) {
+        $("#"+target).text(curNum-1)
+        $(this).parentsUntil(".dice").children(".up").button("option", "disabled", false)
+      } else if(curNum > 0){
+        $("#"+target).text(curNum-1)
+        $(this).button("option", "disabled", true);
+        $("#"+target).remove();
+      }
+    });
+    $(up).button({
+      text: false,
+      icons: {primary: "ui-icon-seek-next"}
+    }).on("click",function(e){
+      var target = e.currentTarget.attributes.assignment.textContent
+      var curNum = parseInt(parseInt($("#"+target).text()))
+      if(!$("#"+target).text()) {
+        $("img[assignment="+target+"]").after('<span id="'+target+'" class="overlay" style="">1</span>'); //img assignment = assignment
+        $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
+      } else if (curNum < 9) {
+        $("#"+target).text(curNum+1)
+        $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
+      } else {
+        $("#"+target).text(curNum+1)
+        $(this).button("option", "disabled", true);
+      }
+    });
     var diceBottom = document.createElement("DIV");
     diceBottom.className = "diceBottom";
     $(diceBottom).append(down);
@@ -39,11 +72,14 @@ function createButtons(assignment,type = assignment,counter = false){
     var diceBottom = createCounter(assignment)
     $(container).append(diceBottom);
   }
+  $(mainButton).button({text: false});
   $(container).on("click", function(target) {
     var assignment = $(target.currentTarget).attr("class").split(' ')[1];
     var amount = $("#"+assignment).text()>1?$("#"+assignment).text():1;
     var type = $(target.currentTarget).attr("class").split(' ')[2];
     writeDice(amount,assignment,type);
+  }).on("click",".diceBottom",function(e){
+    e.stopPropagation();
   });
   return container;
 }
@@ -104,7 +140,7 @@ function writeDice(amount,assignment,type) {
     default:          result = "ERROR! writeDice args: "+amount+" "+assignment+" "+type; break;
   }
   $("#result").empty().append(document.createTextNode(result))
-  resize();
+  //resize();
 }
 function resize(){
   var result = $("#result");
@@ -113,71 +149,54 @@ function resize(){
     var contentHeight = result[0].scrollHeight;
     if (contentHeight<80) contentHeight = 80;
     if (contentHeight > result.height()) result.height(contentHeight);
+    result.fadeTo(250, 0.71, function() { $('.result').fadeTo(100, 1); });
 }
 function initialize(){
-  $(".diceTop").button({text: false});
+  $("#customDiceEntry").button().click(function(e){addCustom();});
   $(".namePart").button().click(function(e){
     randomNamePart(this)
   });
   $("#mix,#clear").button().click(function( event ) {
     event.preventDefault();
-    if(this.className.split(" ")[0] == "diceTop") return;
-    if(this.name=="clear") {
-      $(".spinner").each(function(index) {
-        this.value = 0;
-      });
+    if(this.id=="clear") {
+      $("#number .overlay").remove();
+      $("#number .down").button("option", "disabled", true);
+      $("#number .up").button("option","disabled", false);
       return;
     }
     var collection = new Array();
-    $(".spinner").each(function(index) {
-      if(!this.value||this.value == 0) return true;
-      collection.push(chance.rpg(this.value+this.name));
+    var labels = new Array();
+    $(".overlay").each(function(index, item) {
+      var j = (parseInt(item.textContent)>0?parseInt(item.textContent):"")+item.id;
+      if($($(item).parentsUntil(".section")).hasClass("number")) collection.push(chance.rpg(j)); labels.push(j);
     });
     var displayResults = ""
     var finalResult = 0;
     $.each(collection, function(index) {
       var sum = this.reduce(function(pv, cv) {return parseInt(pv) + parseInt(cv); }, 0);
       collection[index] = collection[index]!=sum?collection[index] + " = " + sum:collection[index];
-      displayResults += collection[index] + "\n";
+      displayResults += labels[index] + ":\t\t\t" + collection[index] + "<br>";
       finalResult += sum;
     });
     displayResults = displayResults + "Final Total: " + finalResult;
-    $("#diceResult").empty().append(displayResults);
-    resize();
+    $("#result").empty().append(displayResults);
+    //resize();
   });
-  $(".up").button({
-    text: false,
-    icons: {primary: "ui-icon-seek-next"}
-  }).on("click",function(e){
-    var target = e.currentTarget.attributes.assignment.textContent
-    var curNum = parseInt(parseInt($("#"+target).text()))
-    if(!$("#"+target).text()) {
-      $("img[assignment="+target+"]").after('<span id="'+target+'" class="overlay" style="">1</span>'); //img assignment = assignment
-      $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
-    } else if (curNum < 9) {
-      $("#"+target).text(curNum+1)
-      $(this).parentsUntil(".dice").children(".down").button("option", "disabled", false)
-    } else {
-      $("#"+target).text(curNum+1)
-      $(this).button("option", "disabled", true);
-    }
+
+  var timeoutId = 0;
+  var intervalId = 0;
+  $('.up,.down').mousedown(function(e) {
+    timeoutId = setTimeout(function() {
+      intervalId = setInterval(function(){
+        $(e.currentTarget).click();
+      }, 250);
+    }, 750);
+  }).bind('mouseup mouseleave', function(e) {
+      e.preventDefault();
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
   });
-  $(".down").button({
-    text: false,
-    disabled: true,
-    icons: {primary: "ui-icon-seek-prev"}
-  }).on("click",function(e){
-    var target = e.currentTarget.attributes.assignment.textContent
-    var curNum = parseInt(parseInt($("#"+target).text()))
-    if (curNum >1) {
-      $("#"+target).text(curNum-1)
-      $(this).parentsUntil(".dice").children(".up").button("option", "disabled", false)
-    } else if(curNum > 0){
-      $("#"+target).text(curNum-1)
-      $(this).button("option", "disabled", true);
-      $("#"+target).remove();
-    }
-  });
+
   $("#standard").buttonset();
   $(".incl").button({icons: { primary: "ui-icon-check" }}).click(function() {
         var options;
@@ -192,6 +211,17 @@ function initialize(){
         }
         $( this ).button( "option", options );
       });
+}
+function addCustom(){
+  var sides = $("#customInteger").val();
+  if(numDice.includes("d"+sides)) {alert("This die already exists! Custom dice should be unique."); return;}
+  numDice.push("d"+sides);
+  if(!isSafeInteger(sides)) {alert("Invalid Input. Value must be a whole, positive, number."); return;}
+  var widget = createButtons("d"+sides, "number", true);
+  $(widget).find(".deece").attr("src","images/customDie.png").append("D"+sides).parent().append("D"+sides);
+  $("#number").append(widget)
+  $("#customInteger").val("How many sides?");
+  $(".down .up").button("refresh");
 }
 $(document).ready(function(){
   numDice.forEach(function(item){
@@ -210,16 +240,48 @@ $(document).ready(function(){
   (function(){var widget = createButtons("letter","alpha",true); $("#alpha").append(widget);})();
   initialize();
 });
+function isSafeInteger (number) {
+    return parseInt(number) == number
+    && number <= Number.MAX_SAFE_INTEGER
+    && number >= 0
+}
+if (!Array.prototype.includes) {
+  Array.prototype.includes = function(searchElement /*, fromIndex*/ ) {
+    'use strict';
+    var O = Object(this);
+    var len = parseInt(O.length) || 0;
+    if (len === 0) {
+      return false;
+    }
+    var n = parseInt(arguments[1]) || 0;
+    var k;
+    if (n >= 0) {
+      k = n;
+    } else {
+      k = len + n;
+      if (k < 0) {k = 0;}
+    }
+    var currentElement;
+    while (k < len) {
+      currentElement = O[k];
+      if (searchElement === currentElement ||
+         (searchElement !== searchElement && currentElement !== currentElement)) { // NaN !== NaN
+        return true;
+      }
+      k++;
+    }
+    return false;
+  };
+}
   </script>
-  <style>
-
-
-
-  </style>
 </head>
 <body>
 <div id="result" class="result"></div>
-<div id="number" class="section"></div>
+<div id="number" class="section">
+  <a id="mix" class="rotatedButton" href="#"><span class='rotated'>Roll 'em all</span></a>
+  <a id="clear" class="rotatedButton" href="#"><span class='rotated'>Clear 'em</span></a>
+  <div id="customNumber"><input id="customInteger" type="number" min=1 placeholder="How many sides?"></input><button id="customDiceEntry">Add custom die</button></div>
+</div>
 <hr size="3" style="clear:both;">
 <div class=section>
   <div id="direction" class="inner-section"></div>
@@ -236,7 +298,6 @@ $(document).ready(function(){
   </div>
   <div id="names">
   <div id="toolbar">
-
     <span id="namePartGender">
       <input type="radio" id="namePartEither" name="npg" value="all"  checked="checked"><label for="namePartEither">Either Gender</label>
       <input type="radio" id="namePartMale" name="npg" value="male"><label for="namePartMale">Male Name</label>
