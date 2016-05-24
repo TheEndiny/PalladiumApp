@@ -2,6 +2,9 @@ body {
   background-color: lightgray;
   font-size: 16px;
 }
+span:first-letter {
+    text-transform:capitalize;
+}
 .deece {
 	height: 40px;
 	width: 40px;
@@ -39,6 +42,7 @@ body {
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	width: 100%;
+  z-index: 2;
 }
 .arrow {
 	width: 45%;
@@ -94,4 +98,17 @@ body {
     height: 51px;
     position: absolute;
     width: 150px;
+}
+
+.ui-button-text {
+  position: relative;
+}
+.customLabel {
+  bottom: 0;
+  color: black;
+  font-weight: 600;
+  left: 20%;
+  position: absolute;
+  text-shadow: -2px -2px white;
+  z-index: 1;
 }

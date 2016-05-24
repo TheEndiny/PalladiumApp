@@ -218,7 +218,7 @@ function addCustom(){
   numDice.push("d"+sides);
   if(!isSafeInteger(sides)) {alert("Invalid Input. Value must be a whole, positive, number."); return;}
   var widget = createButtons("d"+sides, "number", true);
-  $(widget).find(".deece").attr("src","images/customDie.png").append("D"+sides).parent().append("D"+sides);
+  $(widget).find(".deece").attr("src","images/customDie.png").parent().append('<span class="customLabel"">D'+sides+'</span>');
   $("#number").append(widget)
   $("#customInteger").val("How many sides?");
   $(".down .up").button("refresh");
@@ -234,6 +234,7 @@ $(document).ready(function(){
   });
   ageDice.forEach(function(item){
     var widget = createButtons(item,"age");
+    if(item !="any-age") $(widget).find(".deece").after('<span class="customLabel" style="font-size:80%">'+item+'</span>');
     $("#age").append(widget);
   });
   (function(){var widget = createButtons("gender","sex"); $("#gender").append(widget);})();
