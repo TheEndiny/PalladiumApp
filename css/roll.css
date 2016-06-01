@@ -1,71 +1,80 @@
 body {
-  background-color: lightgray;
-  font-size: 16px;
+    background-color: lightgray;
+    font-size: 16px;
 }
 span:first-letter {
-    text-transform:capitalize;
+    text-transform: capitalize;
+}
+.updated {
+    /*color: #FFF !important;*/
+    background-color: lightgrey !important;
+}
+.errored {
+    color: #FFF !important;
+    background: darkred;
+    !important;
 }
 .deece {
-	height: 40px;
-	width: 40px;
+    height: 40px;
+    width: 40px;
 }
 .down {
-	border-bottom-left-radius: 20px !important;
-	height: 15px;
+    border-bottom-left-radius: 20px !important;
+    height: 15px;
 }
 .up {
-	border-bottom-right-radius: 20px !important;
-	height: 15px;
+    border-bottom-right-radius: 20px !important;
+    height: 15px;
 }
 .dice {
-	float: left;
-	overflow: hidden;
-	position: relative;
+    float: left;
+    overflow: hidden;
+    position: relative;
 }
 .diceTop {
-	display: block;
-	height: auto;
-	max-width: 100%;
-	min-width: 100%;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
 }
 .diceBottom {
-	margin-left: 3px;
-	margin-top: -3px;
+    margin-left: 3px;
+    margin-top: -3px;
 }
 .overlay {
-	background-color: lightgray;
-	color: white;
-	left: 50%;
-	opacity: 0.9;
-	position: absolute;
-	text-shadow: 0 0 5px black;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 100%;
-  z-index: 2;
+    background-color: lightgray;
+    color: white;
+    left: 50%;
+    opacity: 0.9;
+    position: absolute;
+    text-shadow: 0 0 5px black;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    z-index: 2;
 }
 .arrow {
-	width: 45%;
+    width: 45%;
 }
 .result {
-  background-color: white;
-  border: 4px groove;
-  border-radius: 20px;
-  min-height: 80px;
-  padding: 1px 0 0 4px;
-  width: 98.5vw;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    background-color: white;
+    border: 4px groove;
+    border-radius: 20px;
+    min-height: 80px;
+    padding: 1px 0 0 4px;
+    width: 98.5vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .section {
-	clear: both;
-	float: left;
-	margin: 4px;
-	position: relative;
+    clear: both;
+    float: left;
+    margin: 4px;
+    position: relative;
 }
 .inner-section {
-	float: left;
+    float: left;
 }
 .highlight {
     border-color: yellow !important;
@@ -82,7 +91,6 @@ span:first-letter {
     margin: 24px -38px;
     padding-bottom: 0;
 }
-
 #customNumber {
     float: right;
     left: 80px;
@@ -99,16 +107,23 @@ span:first-letter {
     position: absolute;
     width: 150px;
 }
-
 .ui-button-text {
-  position: relative;
+    position: relative;
 }
 .customLabel {
-  bottom: 0;
-  color: black;
-  font-weight: 600;
-  left: 20%;
-  position: absolute;
-  text-shadow: -2px -2px white;
-  z-index: 1;
+    bottom: 0;
+    color: black;
+    font-weight: 600;
+    left: 20%;
+    position: absolute;
+    text-shadow: -2px -2px white;
+    z-index: 1;
+}
+black;
+font-weight: 600;
+left: 20%;
+position: absolute;
+text-shadow: -2px -2px white;
+z-index: 1;
+
 }

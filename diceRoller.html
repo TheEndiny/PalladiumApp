@@ -12,6 +12,9 @@ var directionDice = ["card","cardinal"]
 var genderDice = ["gender"]
 var ageDice = ["any-age", "child", "teen", "adult", "senior"]
 var letterDice = ["letter"]
+var timeoutId = 0;
+var intervalId = 0;
+var $output;
 function createButtons(assignment,type = assignment,counter = false){
   function createCounter(assignment) {
     function createArrowButton(direction, assignment){
@@ -26,7 +29,7 @@ function createButtons(assignment,type = assignment,counter = false){
     $(down).button({
       text: false,
       disabled: true,
-      icons: {primary: "ui-icon-seek-prev"}
+      icons: {primary: "ui-icon-minusthick"}
     }).on("click",function(e){
       var target = e.currentTarget.attributes.assignment.textContent
       var curNum = parseInt(parseInt($("#"+target).text()))
@@ -38,10 +41,20 @@ function createButtons(assignment,type = assignment,counter = false){
         $(this).button("option", "disabled", true);
         $("#"+target).remove();
       }
+    }).mousedown(function(e) {
+      timeoutId = setTimeout(function() {
+        intervalId = setInterval(function(){
+          $(e.currentTarget).click();
+        }, 250);
+      }, 750);
+    }).bind('mouseup mouseleave', function(e) {
+        e.preventDefault();
+        clearInterval(intervalId);
+        clearTimeout(timeoutId);
     });
     $(up).button({
       text: false,
-      icons: {primary: "ui-icon-seek-next"}
+      icons: {primary: "ui-icon-plusthick"}
     }).on("click",function(e){
       var target = e.currentTarget.attributes.assignment.textContent
       var curNum = parseInt(parseInt($("#"+target).text()))
@@ -55,6 +68,16 @@ function createButtons(assignment,type = assignment,counter = false){
         $("#"+target).text(curNum+1)
         $(this).button("option", "disabled", true);
       }
+    }).mousedown(function(e) {
+      timeoutId = setTimeout(function() {
+        intervalId = setInterval(function(){
+          $(e.currentTarget).click();
+        }, 250);
+      }, 750);
+    }).bind('mouseup mouseleave', function(e) {
+        e.preventDefault();
+        clearInterval(intervalId);
+        clearTimeout(timeoutId);
     });
     var diceBottom = document.createElement("DIV");
     diceBottom.className = "diceBottom";
@@ -95,7 +118,7 @@ function randomNamePart(obj) {
     case "first": id=chance.first(options); break;
     case "last": id=chance.last(options); break;
   }
-  $("#namePartResult").empty().append(document.createTextNode(id));
+  $output.empty().append(document.createTextNode(id));
 }
 function randomLetter(amount, letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){ //allowed grains: any string of characters.
   var letter = "";
@@ -131,31 +154,40 @@ function rollNumberDice(amount,type){ //allowed grains: #d# where first # is amo
 }
 function writeDice(amount,assignment,type) {
   var result;
+  var msg;
   switch (type) {
-    case "number":    result = rollNumberDice(amount,assignment); break;
-    case "direction": result = randomDirection(assignment); break;
-    case "age" :      result = randomAge(assignment); break;
-    case "sex":       result = String(chance.gender()); break;
-    case "alpha":     result = randomLetter(amount); break;
-    default:          result = "ERROR! writeDice args: "+amount+" "+assignment+" "+type; break;
+    case "number":    result = rollNumberDice(amount,assignment); msg = "updated"; break;
+    case "direction": result = randomDirection(assignment); msg = "updated"; break;
+    case "age" :      result = randomAge(assignment); msg = "updated"; break;
+    case "sex":       result = String(chance.gender()); msg = "updated"; break;
+    case "alpha":     result = randomLetter(amount); msg = "updated"; break;
+    default:          result = "ERROR! writeDice args: "+amount+" "+assignment+" "+type; msg = "errored"; break;
   }
-  $("#result").empty().append(document.createTextNode(result))
-  //resize();
+  $output.empty().append(document.createTextNode(result))
+  blink("#result", 1, 100, msg);
 }
-function resize(){
-  var result = $("#result");
-  result.height(2);
-  result.css("resize:none;")
-    var contentHeight = result[0].scrollHeight;
-    if (contentHeight<80) contentHeight = 80;
-    if (contentHeight > result.height()) result.height(contentHeight);
-    result.fadeTo(250, 0.71, function() { $('.result').fadeTo(100, 1); });
+function blink(elem, times, speed, type) {
+    if (times > 0 || times < 0) {
+        if ($(elem).hasClass(type))
+            $(elem).removeClass(type);
+        else
+            $(elem).addClass(type);
+    }
+
+    clearTimeout(function () {
+        blink(elem, times, speed);
+    });
+
+    if (times > 0 || times < 0) {
+        setTimeout(function () {
+            blink(elem, times, speed, type);
+        }, speed);
+        times -= .5;
+    }
 }
 function initialize(){
   $("#customDiceEntry").button().click(function(e){addCustom();});
-  $(".namePart").button().click(function(e){
-    randomNamePart(this)
-  });
+  $(".namePart").button().click(function(e){randomNamePart(this)});
   $("#mix,#clear").button().click(function( event ) {
     event.preventDefault();
     if(this.id=="clear") {
@@ -179,22 +211,8 @@ function initialize(){
       finalResult += sum;
     });
     displayResults = displayResults + "Final Total: " + finalResult;
-    $("#result").empty().append(displayResults);
+    $output.empty().append(displayResults);
     //resize();
-  });
-
-  var timeoutId = 0;
-  var intervalId = 0;
-  $('.up,.down').mousedown(function(e) {
-    timeoutId = setTimeout(function() {
-      intervalId = setInterval(function(){
-        $(e.currentTarget).click();
-      }, 250);
-    }, 750);
-  }).bind('mouseup mouseleave', function(e) {
-      e.preventDefault();
-      clearInterval(intervalId);
-      clearTimeout(timeoutId);
   });
 
   $("#standard").buttonset();
@@ -214,16 +232,23 @@ function initialize(){
 }
 function addCustom(){
   var sides = $("#customInteger").val();
-  if(numDice.includes("d"+sides)) {alert("This die already exists! Custom dice should be unique."); return;}
+  if(numDice.includes("d"+sides)) {$output.empty().append(document.createTextNode("This die already exists! Custom dice should be unique."));blink("#result", 2, 100, "errord");return;}
+
+  if(!isPositiveInteger(sides)) {
+    if(sides >= 9007199254740991) {
+      $output.empty().append(document.createTextNode("Why would you ever need that? Just... why?."));return;
+    } else {
+      $output.empty().append(document.createTextNode("Invalid Input. Value must be a whole, positive, number."));blink("#result", 1, 100, "errord");return;
+    }
+  }
   numDice.push("d"+sides);
-  if(!isSafeInteger(sides)) {alert("Invalid Input. Value must be a whole, positive, number."); return;}
   var widget = createButtons("d"+sides, "number", true);
-  $(widget).find(".deece").attr("src","images/customDie.png").parent().append('<span class="customLabel"">D'+sides+'</span>');
+  $(widget).find(".deece").attr("src","images/customDie.png").parent().append('<span class="customLabel">D'+sides+'</span>');
   $("#number").append(widget)
   $("#customInteger").val("How many sides?");
-  $(".down .up").button("refresh");
 }
 $(document).ready(function(){
+  $output = $("#result")
   numDice.forEach(function(item){
     var widget = createButtons(item,"number",true);
     $("#number").append(widget)
@@ -241,7 +266,7 @@ $(document).ready(function(){
   (function(){var widget = createButtons("letter","alpha",true); $("#alpha").append(widget);})();
   initialize();
 });
-function isSafeInteger (number) {
+function isPositiveInteger (number) {
     return parseInt(number) == number
     && number <= Number.MAX_SAFE_INTEGER
     && number >= 0
