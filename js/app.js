@@ -7,12 +7,6 @@ $(document).ready(function(){
     populateInvocations(offset, pageSize);
     populateSpellbook();
 });
-function getToolTipDetails(target,elem){
-  db.invocations.get(target, function(item){
-    var x = getDetails(item);
-    elem.tooltip('option','content',x);
-  })
-}
 function writeDetails (target) { //routine for adding a sliding div to the page with details specific to the spell header clicked
   var x = db.invocations.get(parseInt($(target.newPanel).parent().attr("id")), function(item){
     var details=getDetails(item);
@@ -124,19 +118,21 @@ function populateSpellbook() {
   })
 }
 function populateInvocations(os, ps) {
+  var $invocation = $("#invocations");
   if(os<ps){$("#prev").prop("disabled",true)}
-  $("#invocations").hide()
+  $invocation.hide()
   db.invocations.offset(os).limit(ps).each(function(invo){
     var info = invocationInfo(invo);
     var group = document.createElement("DIV");
+    var $group =$(group)
     var header = document.createElement("H3");
     var content = document.createElement("DIV");
-    $(group).addClass('spell');
+    $group.addClass('spell');
     group.id = invo.key;
     header.innerHTML = info;
-    $(group).append(header);
-    $(group).append(content);
-    $("#invocations").append(group);
+    $group.append(header);
+    $group.append(content);
+    $invocation.append(group);
   }).then(function() {
     offset = os+ps;
   }).then(function() {
@@ -148,10 +144,10 @@ function populateInvocations(os, ps) {
           db.spellbook.put({invoKey: parseInt(sb[x]),rank: x}).catch(function(error){console.log("spellbook sortaddition issue: "+error)});
         }
     }
-    if($("#invocations").accordion("instance")) {
-      $("#invocations").accordion("refresh");
+    if($invocation.accordion("instance")) {
+      $invocation.accordion("refresh");
     } else {
-      $("#invocations").accordion({
+      $invocation.accordion({
         header: "> div > h3",
         beforeActivate: function(event, ui) {writeDetails(ui);},
         activate: function(event, ui) {ui.oldPanel.children().remove()},
@@ -167,7 +163,7 @@ function populateInvocations(os, ps) {
       cursorAt:  { top: 56, left: 56 },
       handle: "h3",
       cancel: "table",
-      create: function(){$("#invocations").accordion("option","active",false)},
+      create: function(){$invocation.accordion("option","active",false)},
       start: function(event, ui){ui.helper.children('.ui-accordion-content').remove();}
     });
     $( "#spellbook" ).droppable({
@@ -201,7 +197,7 @@ function populateInvocations(os, ps) {
       update: putSpellBook
     });
   }).then(function(){
-    $("#invocations").removeAttr( "style" ).hide().fadeIn();
+    $invocation.removeAttr( "style" ).hide().fadeIn();
   });
 }
 function getDetails(id) { //this takes in a

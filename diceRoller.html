@@ -200,7 +200,7 @@ function initialize(){
     var labels = new Array();
     $(".overlay").each(function(index, item) {
       var j = (parseInt(item.textContent)>0?parseInt(item.textContent):"")+item.id;
-      if($($(item).parentsUntil(".section")).hasClass("number")) collection.push(chance.rpg(j)); labels.push(j);
+      if($(item).parentsUntil(".section").hasClass("number")) collection.push(chance.rpg(j)); labels.push(j);
     });
     var displayResults = ""
     var finalResult = 0;
@@ -214,31 +214,29 @@ function initialize(){
     $output.empty().append(displayResults);
     //resize();
   });
-
-  $("#standard").buttonset();
-  $(".incl").button({icons: { primary: "ui-icon-check" }}).click(function() {
-        var options;
-        if ( $( this ).next().attr('aria-pressed') == "true" ) {
-          options = {
-            icons: { primary: "ui-icon-check" }
-          };
-        } else {
-          options = {
-            icons: {primary: "ui-icon-circle-check"}
-          };
-        }
-        $( this ).button( "option", options );
-      });
+  // $(".incl").button({icons: { primary: "ui-icon-check" }}).click(function() {
+  //       var options;
+  //       if ( $( this ).next().attr('aria-pressed') == "true" ) {
+  //         options = {
+  //           icons: { primary: "ui-icon-check" }
+  //         };
+  //       } else {
+  //         options = {
+  //           icons: {primary: "ui-icon-circle-check"}
+  //         };
+  //       }
+  //       $( this ).button( "option", options );
+  //     });
 }
 function addCustom(){
   var sides = $("#customInteger").val();
-  if(numDice.includes("d"+sides)) {$output.empty().append(document.createTextNode("This die already exists! Custom dice should be unique."));blink("#result", 2, 100, "errord");return;}
+  if(numDice.includes("d"+sides)) {$output.empty().append(document.createTextNode("This die already exists! Custom dice should be unique."));blink("#result", 2, 100, "errored");return;}
 
   if(!isPositiveInteger(sides)) {
     if(sides >= 9007199254740991) {
       $output.empty().append(document.createTextNode("Why would you ever need that? Just... why?."));return;
     } else {
-      $output.empty().append(document.createTextNode("Invalid Input. Value must be a whole, positive, number."));blink("#result", 1, 100, "errord");return;
+      $output.empty().append(document.createTextNode("Invalid Input. Value must be a whole, positive, number."));blink("#result", 1, 100, "errored");return;
     }
   }
   numDice.push("d"+sides);

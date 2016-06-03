@@ -11,8 +11,7 @@ span:first-letter {
 }
 .errored {
     color: #FFF !important;
-    background: darkred;
-    !important;
+    background: darkred !important;
 }
 .deece {
     height: 40px;
@@ -118,12 +117,4 @@ span:first-letter {
     position: absolute;
     text-shadow: -2px -2px white;
     z-index: 1;
-}
-black;
-font-weight: 600;
-left: 20%;
-position: absolute;
-text-shadow: -2px -2px white;
-z-index: 1;
-
 }
