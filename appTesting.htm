@@ -3,10 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/snap.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/polyfills.js"></script>
   <script src="js/jquery.requestAnimationFrame.min.js"></script>
   <script src="js/snap.min.js"></script>
   <script src="js/app.js"></script>
@@ -14,19 +15,14 @@
   <title></title>
 </head>
 <body>
-  <div class ="drawers snap-drawer">
-      <div class="left-drawer snap-drawer-left">
-        <ul id="spellbook">
-          <li class="placeholder">Drag your spells here</li>
-        </ul>
-      </div>
-  </div>
   <div id="content" class="snap-content">
-    <button onclick="db.delete().then(function(){window.location.reload()});">Delete Database and reload page</button>
-    <h2>Swipe right to open your spellbook</h2>
-    <p>Spells:</p><button id="prev" class="pageButton" onclick="prev()"><</button>
-    <button id="next" class="pageButton" onclick="next()">></button><span id="pageTracker"></span>
-    <p id="invocations"  data-snap-ignore="true"></p>
+    <span id="grippy">||<br/>||</span>
+    <!--<button onclick="db.delete().then(function(){window.location.reload()});">Delete Database and reload page</button>-->
+    <h1 style="z-index:9; position:relative;">Spells:</h1>
+    <button id="prev" class="pageButton" onclick="prev()"><</button>
+    <button id="next" class="pageButton" onclick="next()">></button>
+    <span id="pageTracker"></span>
+    <p id="invocations" data-snap-ignore="true"></p>
   </div>
 </body>
 </html>

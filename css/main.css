@@ -1,21 +1,29 @@
+
 ul {
-  list-style-type: none;
-  padding: 1px;
-  height: 97%;
-}
-.left-drawer {
-    border: 4px inset black;
-    border-radius: 5px;
-    margin: 3px;
+    list-style-type: none;
+    padding: 1px;
 }
 .snap-drawer-left {
     height: 97%;
     left: 0;
     z-index: 1;
 }
-
 #spellbook > li {
     border: 2px ridge black;
     border-radius: 5px;
     width: 98%;
+}
+#grippy {
+    align-items: center;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #feffe8 0%, #feffe8 0%, #9fa38f 48%) repeat scroll 0 0;
+    cursor: col-resize;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    table-layout: fixed;
+    text-align: -moz-center;
+    width: 10px;
+    z-index: 1;
 }

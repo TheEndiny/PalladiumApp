@@ -1,18 +1,17 @@
+
 body {
-    background-color: lightgray;
+    background-color: darkkhaki;
     font-size: 16px;
 }
-span:first-letter {
+span::first-letter {
     text-transform: capitalize;
 }
 .updated {
-    /*color: #FFF !important;*/
     background-color: lightgrey !important;
 }
 .errored {
-    color: #FFF !important;
-    background: darkred;
-    !important;
+    background: darkred none repeat scroll 0 0 !important;
+    color: #fff !important;
 }
 .deece {
     height: 40px;
@@ -28,17 +27,11 @@ span:first-letter {
 }
 .dice {
     float: left;
-    overflow: hidden;
-    position: relative;
 }
 .diceTop {
-    display: block;
-    height: auto;
     max-width: 100%;
-    min-width: 100%;
 }
 .diceBottom {
-    margin-left: 3px;
     margin-top: -3px;
 }
 .overlay {
@@ -57,15 +50,14 @@ span:first-letter {
     width: 45%;
 }
 .result {
+    align-items: center;
     background-color: white;
     border: 4px groove;
     border-radius: 20px;
-    min-height: 80px;
-    padding: 1px 0 0 4px;
-    width: 98.5vw;
-    align-items: center;
     display: flex;
     justify-content: center;
+    min-height: 80px;
+    padding: 1px 0 0 4px;
 }
 .section {
     clear: both;
@@ -85,11 +77,8 @@ span:first-letter {
 .rotated {
     display: block;
     font-size: 59%;
-    transform: rotate(90deg);
-    border-bottom-width: 0;
-    border-right-width: 0;
     margin: 24px -38px;
-    padding-bottom: 0;
+    transform: rotate(90deg);
 }
 #customNumber {
     float: right;
@@ -108,22 +97,12 @@ span:first-letter {
     width: 150px;
 }
 .ui-button-text {
-    position: relative;
 }
 .customLabel {
     bottom: 0;
     color: black;
     font-weight: 600;
-    left: 20%;
     position: absolute;
-    text-shadow: -2px -2px white;
     z-index: 1;
-}
-black;
-font-weight: 600;
-left: 20%;
-position: absolute;
-text-shadow: -2px -2px white;
-z-index: 1;
-
+    display: table-caption;
 }
