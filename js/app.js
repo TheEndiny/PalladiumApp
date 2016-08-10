@@ -34,14 +34,56 @@ function putSpellBook() { //helper function that clears the user's personal spel
 function populateSpellbook() {
     "use strict";
     db.spellbook.count(function(count) {
+      var all = Dexie.Promise.all;
         if(count > 0) {
             console.log("Spellbook Exists");
-            db.spellbook.orderBy("rank").each(function(item) {
-                sb.push(parseInt(item.invoKey));
-                $("#spellbook").append(item.getSpellItem());
-            }).then(function() {
-                $(".placeholder").remove();
-            });
+            var spellCollection = db.spellbook.orderBy("rank");
+            function buildSpell(spellCollection) {
+                return spellCollection.toArray(function(spells) {
+                    var dataPromise = spells.map(function (spell) {
+                      sb.push(spell.invoKey);
+                        return db.invocations.get(spell.invoKey);
+                    });
+                    return all(dataPromise).then(function (data) {
+                        spells.forEach(function (spell, i) {
+                            spell.usage = data[i].usage;
+                            spell.invocationName = data[i].invocationName;
+                            spell.cost = data[i].cost;
+                        });
+                        return spells;
+                    }).then(function(spells) {
+                      spells.forEach(function(item){
+                        var imgtags = item.invocationName + " (" + item.cost + ")";
+                        item.usage.forEach(function(usageImage) {
+                            var img = document.createElement("IMG");
+                            img.src = "images/" + usageImage;
+                            imgtags += img.outerHTML;
+                        });
+                        var deleteButton = document.createElement("BUTTON");
+                        var spellBookSpell = document.createElement("LI");
+                        $(spellBookSpell).addClass("spellbookspell ui-accordion-header-collapsed ui-state-default");
+                        $(spellBookSpell).attr("assignment", item.invoKey);
+                        spellBookSpell.innerHTML = imgtags;
+                        deleteButton.id = "delete_"+ item.invoKey;
+                        $(deleteButton).button({
+                          icons: { primary: "	ui-icon-circle-close"},
+                          text: false
+                        }).click(function() {
+                          $(this).parent().remove();
+                          putSpellBook();
+                        });
+                        $(spellBookSpell).append(deleteButton);
+                        $("#spellbook").append(spellBookSpell);
+                      });
+
+                    }).then(function() {
+                        $(".placeholder").remove();
+                    }).catch(function(error){
+                      console.log("I FAILED YOU!"+error);
+                    });
+                });
+            }
+            buildSpell(spellCollection);
         } else {
             console.log("No Spellbook");
         }
@@ -117,35 +159,29 @@ function spell(props) {
   var self = this;
   self.invoKey = props.invoKey;
   self.rank = props.rank;
-  self.getSpellItem = function(ui) {
-    //db.invocations.get(self.invoKey, function(item){
-      //var imgtags = "";
-      var deleteButton = document.createElement("BUTTON");
-      var spellBookSpell = document.createElement("LI");
-      var imgtags = $(ui.draggable).children().html();
-      // item.usage.forEach(function(elem) {
-      //   var img = document.createElement("IMG");
-      //   img.src = "images/"+elem;
-      //   imgtags += img.outerHTML;
-      // });
-      $(spellBookSpell).addClass("spellbookspell ui-accordion-header-collapsed ui-state-default");
-      $(spellBookSpell).attr("assignment", ui.draggable.attr("id"));
-      spellBookSpell.innerHTML = imgtags;
-      deleteButton.id = "delete_"+ ui.draggable.attr("id");
-      $(deleteButton).button({
-        icons: { primary: "	ui-icon-circle-close"},
-        text: false
-      }).click(function() {
-        $(this).parent().remove();
-      });
-      $(spellBookSpell).append(deleteButton);
-      return spellBookSpell;
-    //});
-  };
 }
 spell.prototype.edit = function() {
     "use strict";
     return db.spellbook.put({invoKey:this.invoKey,rank:this.rank});
+};
+spell.prototype.getSpellItem = function(ui) {
+  "use strict";
+  var imgtags = $(ui.draggable).children().html();
+    var deleteButton = document.createElement("BUTTON");
+    var spellBookSpell = document.createElement("LI");
+    $(spellBookSpell).addClass("spellbookspell ui-accordion-header-collapsed ui-state-default");
+    $(spellBookSpell).attr("assignment", ui.draggable.attr("id"));
+    spellBookSpell.innerHTML = imgtags;
+    deleteButton.id = "delete_"+ ui.draggable.attr("id");
+    $(deleteButton).button({
+      icons: { primary: "	ui-icon-circle-close"},
+      text: false
+    }).click(function() {
+      $(this).parent().remove();
+      putSpellBook();
+    });
+    $(spellBookSpell).append(deleteButton);
+    return spellBookSpell;
 };
 
 
@@ -241,12 +277,13 @@ function populateInvocations(os, ps) {
       $("#spellbook").droppable({
           activeClass: "ui-state-default",
           hoverClass: "ui-state-hover",
+          tolerance:"pointer",
           classes: {
             "ui-droppable-hover": "ui-state-hover"
           },
           //tolerance: "fit",
           accept: function(draggable) {
-              if($(draggable).hasClass(".ui-sortable-helper")) {
+              if($(draggable).hasClass("ui-sortable-helper")) {
                   return false;
               }
               if(draggable.hasClass("spell")) {
@@ -258,23 +295,21 @@ function populateInvocations(os, ps) {
               return true;
           },
           revert: true,
-          over: function() {console.log("OVER!");},
           drop: function(event, ui) {
-              console.log("DROPPED");
-              var x = ui.draggable.attr('id');
               populateSpellbookSpell(ui);
               $("#spellbook").find(".placeholder").remove();
               putSpellBook();
           }
       }).sortable({
           items: "li:not(.placeholder)",
+          containment:"parent",
           axis: "y",
           placeholder: "sortable-placeholder",
           sort: function() {
               // gets added unintentionally by droppable interacting with sortable
               $(this).removeClass("ui-state-default");
           },
-          update: putSpellBook
+          update: function() {putSpellBook();}
       });
   }).then(function() {
       $("#invocations").removeAttr("style").hide().fadeIn();

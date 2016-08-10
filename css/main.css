@@ -13,6 +13,10 @@ ul {
     border-radius: 5px;
     width: 98%;
 }
+#spellbook {
+    background-color: #8a8a8a;
+    height: 99%;
+}
 #grippy {
     align-items: center;
     background: rgba(0, 0, 0, 0) linear-gradient(to right, #feffe8 0%, #feffe8 0%, #9fa38f 48%) repeat scroll 0 0;

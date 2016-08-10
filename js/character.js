@@ -1,4 +1,12 @@
+/*jslint
+    browser, this, white
+*/
+/*global
+    jQuery, $, Snap, Dexie, console
+*/
+
 function Character_Template(params) {
+  "use strict";
   var char = {
 		flavor: { //Core Character Description
 	    name: "",
@@ -85,6 +93,6 @@ function Character_Template(params) {
 	  abilities: [ //array of special abilities
 
 	  ]
-}
+};
 	return $.extend(true, {}, char, params);
 }
